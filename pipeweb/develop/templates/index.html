@@ -1,0 +1,64 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Swapnil Enterprices</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+          crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="row">
+      <div class="left col-3 mx-3">
+        <img src="{% static 'images/customerservice.png' %}" alt="" srcset="">
+        Call Now
+        <div class="number">+91-9822778278</div>
+      </div>
+      <div class="cen col-5 text-center">Swapnil Enterprises</div>
+      <div class="right col-3 m-4">
+        <button type="button"
+                style='height: fit-content;'
+                class="btn position-relative">
+          <img src="{% static 'images/shoppingcart.png' %}"  alt="" srcset="">
+          <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger px-1"><span class="visually-hidden">unread messages</span>0</span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container nav">
+      <button class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navbar-nav navlist w-100" id="navbarSupportedContent">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><img src="{% static 'images/house.png' %}"  alt="" srcset=""> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><img src="{% static 'images/man.png' %}"  alt="" srcset=""> About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"><img src="{% static 'images/contacts.png' %}"  alt="" srcset=""> Contact Us</a>
+          </li>
+          <li class="nav-item search" >
+            <input  type="search" name='search' placeholder="Search your Product"  aria-label="Search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </li>
+        
+      </div>
+    </div>
+  </nav>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
