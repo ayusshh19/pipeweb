@@ -1,0 +1,83 @@
+{% load static %}
+<!-- logo content -->
+<div class="head">
+    <div class="row">
+      <div class="left1 col-3 mx-3">
+        <img src="{% static 'images/customerservice.png' %}" alt="" srcset="">
+        Call Now
+        <div class="number">+91-9822778278</div>
+      </div>
+      <div class="cen col-4 text-center" style="color: #1e3799;">Swapnil Enterprises</div>
+      <div class="righthand col-4">
+        <li class="nav-item search">
+          <input type="search"
+                 name='search'
+                 placeholder="Search your Product"
+                 aria-label="Search">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </li>
+      </div>
+    </div>
+    <!-- logo content -->
+  </div>
+  <!-- nav content  -->
+  <div class="navhead">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container nav">
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-nav navlist w-100"
+             id="navbarSupportedContent">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <img src="{% static 'images/house.png' %}"  alt="" srcset="">
+            Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <img src="{% static 'images/man.png' %}"  alt="" srcset="">
+            About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <img src="{% static 'images/contacts.png' %}"  alt="" srcset="">
+            Contact Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="product" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="{% static 'images/box.png' %}" style="    width: 24px;
+              height: 24px;" alt="" srcset="">
+              Products
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/product">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <div class="right col-3">
+            <button type="button"
+                    style='height: fit-content;'
+                    class="btn position-relative">
+              <img src="{% static 'images/shoppingcart.png' %}"
+                   style="width: 40px;"
+                   alt=""
+                   srcset="">
+              <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle" style="background-color: #1e3799;"><span class="visually-hidden">unread messages</span>0</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <hr class='one'>
+</div>
+<!-- nav content  -->
