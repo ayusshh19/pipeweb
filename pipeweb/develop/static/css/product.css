@@ -1,0 +1,8 @@
+.accordion{
+    width: 60%;
+    margin: auto;
+}
+.accordion button{
+    font-size: 60%;
+    font-weight: 400;
+}
