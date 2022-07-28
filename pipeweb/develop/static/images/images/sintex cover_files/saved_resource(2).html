@@ -1,0 +1,190 @@
+
+<!-- saved from url=(0041)http://sintexplastics.com/productenquiry/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><br><br>
+
+<!--Dear Kunal Sharma, 
+
+Thank you for your inquiry on www.sintex-plastics.com. Our representative will contact you at earliest. In case you need any assistance please find the contact details of concerned team member from Sintex
+
+B-139/A, Phase-2 Noida-201 305 (U.P)
+Phone : +91-9654264202, 9654983421, 9654983426
+Fax : 
+EMail : sintex.delhi@gmail.com
+
+Summary of your inquiry
+Kunal Sharma
+EMail : kunal@oliveglobal.com
+Phone : 98979797797
+Water Storage Solutions - RENO G WATER TANKS
+
+Best Regards,
+Sales Team,
+B-139/A, Phase-2 Noida-201 305 (U.P)-->
+
+	
+		<title>Enquiry</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script type="text/javascript" async="" src="./analytics.js.download"></script><script async="" src="./js(1)"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-108919786-1');
+		</script>
+		<link rel="stylesheet" href="./bootstrap.min.css">
+		<script src="./jquery.min.js(1).download"></script>
+		<script src="./bootstrap.min.js(1).download"></script>
+		<script>
+			function getcitywiseproduct(str) {
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						//alert(this.responseText);
+						document.getElementById("ajaxsolution").innerHTML = this.responseText;
+					}
+				};
+				xmlhttp.open("GET", "data.php?q=" + str, true);
+				xmlhttp.send();
+			}
+		
+			function validateForm(){
+				var fields = ["name","email", "mobileno", "city", "product", "solution", "subject","comment"];
+				var fieldname='';
+				var message='';
+				for (var i = 0; i < fields.length; i++) {
+					fieldname = fields[i];
+					if (document.forms["enquiry"][fieldname].value == "") {
+						message=message+fieldname+" can not be empty" + "\n";
+						//alert(message);
+						//return false;
+					}
+				}
+				if(message!=''){
+					alert(message);
+					return false;
+				}else{
+					return true;
+				}
+			}
+			
+			function validateFormNew(frm){
+				var flag=0;
+				var message='';
+				if(frm.fname.value==''){
+					flag=1;
+					message+='Enter Your Name.\n';
+				}
+				if(frm.email.value==''){
+					flag=1;
+					message+='Enter Your Email.\n';
+				}else{
+					var mail=frm.email.value;
+					if(ValidateEmail(mail)!='Ok'){
+						flag=1;
+						message+='Enter Valid Email.\n';
+					}
+				}
+				if(frm.mobileno.value==''){
+					flag=1;
+					message+='Enter Your Mobile No.\n';
+				}else{
+					var mb=frm.mobileno.value;
+					var len=mb.length;
+					if(len<10||len>13){
+						flag=1;
+						message+='Enter Valid Mobile No.\n';
+					}
+				}
+				if(frm.ncity.value==''){
+					flag=1;
+					message+='Enter Your Nearest City No.\n';
+				}
+				if(frm.product.value==''){
+					flag=1;
+					message+='Choose Product.\n';
+				}
+				if(frm.solution.value==''){
+					flag=1;
+					message+='Choose Solution.\n';
+				}
+				if(frm.subject.value==''){
+					flag=1;
+					message+='Enter Subject.\n';
+				}
+				if(frm.comment.value==''){
+					flag=1;
+					message+='Enter Comment.\n';
+				}
+				if(message!=''){
+					alert(message);
+					return false;
+				}else{
+					return true;
+				}
+			}
+			
+			function isnumeric(){
+				var mobilenumber=document.forms["enquiry"]["mobileno"].value;
+				var x=mobilenumber.replace(/[^0-9]/g,"");
+				document.forms["enquiry"]["mobileno"].value=x;
+			}
+			
+			function ValidateEmail(mail){
+				if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){
+					return "Ok";
+				}else{
+					//alert("You have entered an invalid email address!")
+					return "Fail";
+				}
+			}
+		</script>
+	
+		<div class="container">
+		<div style="display:none;" class="alert alert-success">
+				</div>
+		<form class="form-group" method="post" name="enquiry" onsubmit="return validateFormNew(this)">
+			<div class="form-group">
+				<label for="name">Name:</label>
+				<input type="text" class="form-control" id="fname" placeholder="Name" name="fname" required="required">
+			</div>
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" class="form-control" id="email" placeholder="Email" name="email" required="required">
+			</div>
+			<div class="form-group">
+				<label for="mobileno">Mobile:</label>
+				<input type="text" class="form-control" id="mobileno" placeholder="Mobile Number" name="mobileno" maxlength="13" onkeyup="isnumeric()" ;="">
+			</div>
+			<div class="form-group">
+				<label for="city">Nearest City:</label>
+				<select name="ncity" id="ncity" required="required" class="form-control">
+				// <option value="">Nearest City</option><option value="13">Secunderabad</option><option value="12">Ranchi</option><option value="11">Pune</option><option value="9">Mumbai</option><option value="8">Lucknow</option><option value="7">Kolkata</option><option value="6">Jaipur</option><option value="5">Chennai</option><option value="4">Chandigarh</option><option value="3">Bhopal</option><option value="2">Bangalore</option><option value="1">Ahmedabad</option><option value="10">New Delhi</option><option value="14">Trivandrum</option>				</select>
+			</div>
+			<div class="form-group">
+				<label for="product">Product:</label>
+				<select name="product" id="product" required="required" onchange="return getcitywiseproduct(this.value)" ;="" class="form-control">
+				<option value="">Select Product</option><option value="1">Water Storage Solutions</option><option value="2">Interiors</option><option value="3">Electrical</option><option value="4">Environmental and Green Solutions</option><option value="5">Industrial</option><option value="6">Sandwich Panel</option><option value="9">Export</option><option value="10">General</option><option value="7">Bio Gas Plant</option><option value="8">SMC Panel Tanks</option><option value="11">Pallets</option><option value="12">Insulated Boxes</option><option value="13">FRP Tanks</option><option value="14">Custom Moulding</option><option value="15">FMD</option><option value="16">Septic Tank</option><option value="17">Under Ground Tank</option>				</select>
+			</div>
+			<div class="form-group">
+				<label for="solution">Solution:</label>
+				<div id="ajaxsolution">
+					<select name="solution" id="solution" required="required" class="form-control">
+						<option value="">Select Solution</option>
+						<option value=""></option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="name">Subject:</label>
+				<input type="text" class="form-control" id="subject" placeholder="Subject" name="subject" required="required">
+			</div>
+			<div class="form-group">
+				<label for="comment">Comments:</label>
+				<textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
+			</div>
+			<button type="submit" class="btn btn-primary" name="addenqiry" id="addenqiry" onclick="gtag(&#39;event&#39;, &#39;contact&#39;, { event_category: &#39;Product Enquiry Form&#39;, event_action: &#39;Submit&#39;, event_label : &#39;Product Page&#39;});">Submit</button>
+		</form>
+	</div>
+</body></html>

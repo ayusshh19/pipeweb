@@ -15,163 +15,208 @@
           rel="stylesheet"
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
           crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <link rel="stylesheet/less" href="{% static 'css/slick-theme.less' %}">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js" defer></script>
+    <script type="text/javascript" src="/test/wp-content/themes/child/script/jquery.jcarousel.min.js"defer></script>
+    <script src="{% static 'js/main.js' %}" defer></script>
+    <script src="{% static 'js/slick.min.js' %}" defer></script>
     {% block staticin %}
-      
     {% endblock staticin %}
-    
   </head>
   <body >
     {% include "nav.html" %}
-    
     {% block body %}
-      
-
-      
-  <!-- image corousal  -->
-  <div class="imagehead w-100">
-    <div class="row">
-      <div class="text-center col-6 p-5">
-        <h2>Welcome to our website</h2>
-        <p class="m-3" style="font-family: cursive;">At Swapnil Enterprises, we are a Pune-based firm involved in manufacturing and supplying premium-quality PVC solvent cement and PVC bend pipes. All our products are highlyvalued since our inception in 2003, because of their accurate design and precise dimensions. The PVC solvent cement we offer is manufactured following the industrial standards and guidelines and under the guidance and supervision of our talented workers who give their best to create the products high-performing and efficient.</p>
-        <div class="buttonslog m-5">
-          <a href="" class="shop mx-2 p-3">Shop Now</a>
-        <a href="" class="get mx-2 p-3">Get Qoutation</a>
+      <div class="homeslider m-3">
+        <div class="slide m-auto">
+          <img src="{% static 'images/images/pvc/pipe.gif' %}" alt="" srcset="">
+          <h5>UPVC PIPE & FITTINGS</h5>
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/images/cpvcSDR11/cpvcbrasstee.jpg' %}" alt="" srcset="">
+          <h5>CPVC PIPE & FITTINGS</h5>
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/images/pvc/tee.gif' %}" alt="" srcset="">
+          <h5>PVC PIPE & FITTINGS</h5>
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/images/swr/sweptteewithdoor.png' %}" alt="" srcset="">
+          <h5>SWR PIPE & FITTINGS</h5>
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/images/PP&HDPE/pptee.jpg' %}" alt="" srcset="">
+          <h5> PP, HDPE PIPE & FITTINGS</h5>
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/images/brassHBallvalve.jpg' %}" alt="" srcset="">
+          <h5>BRASS,CI,MS BALL VALVES</h5>
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/images/sintexTank.jpg' %}" alt="" srcset="">
+          <h5>SINTEX TANKS</h5>
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/images/uclampss.jpg' %}" alt="" srcset="">
+          <h5>CLAMPS</h5>
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/images/clamps&Gasket/rubbersheetNeoprene.jpg' %}" alt="" srcset="">
+          <h5>RUBBER GASKET</h5>
         </div>
       </div>
-      <div class=" col-6 text-center mx-auto"><img src="{% static 'images/pipehead.jpg' %}" alt="" srcset=""></div>
-    </div>
-  </div>
-  <!-- image corousal  -->
-  <!-- our speciality -->
-  <div class="container main-content my-5">
-    <h1 class="text-center my-4">Our Speciality</h1>
-    <div class="speciality text-wrap">
-      <div class="content">
-        <div class="inneritem1 item">
-          <img src="{% static 'images/images4.jpg' %}" alt="" srcset="">
-        </div>
-        <div class="inneritem2 item text-wrap">
-          <h2>Innovation</h2>
-          <p>
-            Swapnil Enterprices offers innovative product designs, created using extensive industry know-how coupled with the latest technology to assure world-class quality.
-          </p>
-        </div>
-      </div>
-      <div class="content">
-        <div class="inneritem4 item ">
-          <h2>Trust</h2>
-          <p>
-            Swapnil Enterprices aims to achieve the vision of earning consumers’ trust and delight. Astral has been operational in India since 2003, striving to serve consumers to the best of their abilities.
-          </p>
-        </div>
-        <div class="inneritem3 item">
-          <img src="{% static 'images/images5.jpg' %}" alt="" srcset="">
-        </div>
-      </div>
-      <div class="content">
-        <div class="inneritem5 item">
-          <img src="{% static 'images/images6.jpg' %}" alt="" srcset="">
-        </div>
-        <div class="inneritem6 item text-wrap">
-          <h2>Quality</h2>
-          <p>
-            Swapnil Enterprices constantly strives to upgrade processes and materials, incorporating international developments in the plumbing industry to benefit the customers
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- our speciality -->
-  <!-- our product Range -->
-  
-  <div class="container main-content my-5">
-    <h1 class="text-center my-4">Our Products Category</h1>
-  </div>
-      
-  
-        <div class="adverts" id="aboutUs">
-
-          <div class="container">
-      <div class="row ">
-     <div class="col-lg-12">
-      <div class="container main-content my-20">
-        <h1 class="text-center my-4">About Us</h1>
-      </div>
-      <div class='text-center'>
-      ________ <svg xmlns="http://www.w3.org/2000/svg"  width="25" height="25" fill="currentColor" class="bi bi-people, mx-auto " viewBox="0 0 16 16">
-        <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
-      </svg> ________</div><br>
-      <p>Established in the year 2003 at Nagpur, Maharashtra, We <strong>“Pune, Maharashtra”</strong> are a Sole Proprietorship based firm, engaged as the foremost Wholesale Trader of Storage Tank, PVC Pipe, etc. Our products are high in demand due to their premium quality, seamless finish, different patterns and affordable prices. Furthermore, we ensure to timely deliver theses products to our clients, through this, we have gained a huge clients base in the market</p>
-              </div>
+      <!-- image corousal  -->
+      <div class="mainslide">
+        <div class="slide main"><div class="row p-5">
+          <div class="col-6">
+            <h2>Our Treanding products</h2>
+            <p>Piping class or Pipe Class is a document that specifies the type of the components such as a type of pipe, schedule, material, flange ratings, branch types, valve types and valve trim material, gasket, and all the other components specific requirements to be used for different fluids under different operating conditions in a plant.</p>
+            <div class="buttonslog m-5">
+              <div class="shop mx-2 p-3"><a href="http://">Shop Now</a></div>
+            <div class="get mx-2 p-3"><a href="http://">Quotation</a></div>
+            </div>
           </div>
+          <div class="col-6 m-auto"><img src="{% static 'images/slide3.png' %}" alt="" class=" text-center" srcset=""></div>
+        </div></div>
+        <div class="slide main"><img src="{% static 'images/images/clamps&Gasket/rubbersheetNeoprene.jpg' %}" alt="" srcset=""></div>
+        <div class="slide main"><img src="{% static 'images/images/clamps&Gasket/rubbersheetNeoprene.jpg' %}" alt="" srcset=""></div>
       </div>
-
-      
-      
+      <!-- image corousal  -->
+      <!-- our speciality -->
       <div class="container main-content my-5">
-        <h1 class="text-center my-4">Contact Us</h1>
+        <h1 class="text-center my-4">Our Speciality</h1>
+        <div class="speciality text-wrap">
+          <div class="content">
+            <div class="inneritem1 item">
+              <img src="{% static 'images/images4.jpg' %}" alt="" srcset="">
+            </div>
+            <div class="inneritem2 item text-wrap">
+              <h2>Innovation</h2>
+              <p>
+                Swapnil Enterprices offers innovative product designs, created using extensive industry know-how coupled with the latest technology to assure world-class quality.
+              </p>
+            </div>
+          </div>
+          <div class="content">
+            <div class="inneritem4 item ">
+              <h2>Trust</h2>
+              <p>
+                Swapnil Enterprices aims to achieve the vision of earning consumers’ trust and delight. Astral has been operational in India since 2003, striving to serve consumers to the best of their abilities.
+              </p>
+            </div>
+            <div class="inneritem3 item">
+              <img src="{% static 'images/images5.jpg' %}" alt="" srcset="">
+            </div>
+          </div>
+          <div class="content">
+            <div class="inneritem5 item">
+              <img src="{% static 'images/images6.jpg' %}" alt="" srcset="">
+            </div>
+            <div class="inneritem6 item text-wrap">
+              <h2>Quality</h2>
+              <p>
+                Swapnil Enterprices constantly strives to upgrade processes and materials, incorporating international developments in the plumbing industry to benefit the customers
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-                   <div>
-                <div class="container">
-                    <div class="contact-parent">
-                        <div class="contact-child child1">
-                            <p>
-                                <i class="fas fa-map-marker-alt"></i> Address <br />
-                                <span> Plot No.71/1/B/2&3,Unit No:5,
-                                  <br> G Block,Khira Industraial Premises CO-OP Soc,MIDC, Bhosari,Pune - 411026
-                                </span>
-                            </p>
-    
-                            <p>
-                                <i class="fas fa-phone-alt"></i>Phone <br />
-                                <span>+91 8308815048</span>
-                            </p>
-    
-                            <p>
-                                <i class=" far fa-envelope"></i>Email <br />
-                                <span>swapnilentps@gmail</span>
-                            </p>
-                        </div>
-    
-                        <div class="contact-child child2">
-                            <div class="inside-contact">
-                                
-                                <h3>
-                                   <span id="confirm">
-                                </h3>
-    
-                                <p>Name *</p>
-                                <input id="txt_name" type="text" Required="required">
-    
-                                <p>Email *</p>
-                                <input id="txt_email" type="text" Required="required">
-    
-                                <p>Phone *</p>
-                                <input id="txt_phone" type="text" Required="required">
-    
-                                <p>Message *</p>
-                                <textarea id="txt_message" rows="4" cols="20" Required="required" ></textarea>
-                                
-                                <input type="submit" id="btn_send" value="SEND">
-                            </div>
-                        </div>
-                    
-               
+      <!-- our speciality -->
+      <!-- our product Range -->
+      <div class="container main-content my-5">
+        <h1 class="text-center my-4">
+          Our Products Category
+        </h1>
+      </div>
+      <div class="adverts" id="aboutUs">
+        <div class="container">
+          <div class="row ">
+            <div class="col-lg-12">
+              <div class="container main-content my-20">
+                <h1 class="text-center my-4">
+                  About Us
+                </h1>
+              </div>
+              <div class='text-center'>
+                ________
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="25"
+                     height="25"
+                     fill="currentColor"
+                     class="bi bi-people, mx-auto "
+                     viewBox="0 0 16 16">
+                  <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                </svg>
+                ________
+              </div>
+              <br>
+              <p>
+                Established in the year 2003 at Nagpur, Maharashtra, We <strong>“Pune, Maharashtra”</strong> are a Sole Proprietorship based firm, engaged as the foremost Wholesale Trader of Storage Tank, PVC Pipe, etc. Our products are high in demand due to their premium quality, seamless finish, different patterns and affordable prices. Furthermore, we ensure to timely deliver theses products to our clients, through this, we have gained a huge clients base in the market
+              </p>
             </div>
+          </div>
         </div>
+        <div class="container main-content my-5">
+          <h1 class="text-center my-4">
+            Contact Us
+          </h1>
         </div>
-        
-    
-
-                    </div>
+        <div>
+          <div class="container">
+            <div class="contact-parent">
+              <div class="contact-child child1">
+                <p>
+                  <i class="fas fa-map-marker-alt"></i> Address
+                  <br />
+                  <span> Plot No.71/1/B/2&3,Unit No:5,
+                    <br>
+                    G Block,Khira Industraial Premises CO-OP Soc,MIDC, Bhosari,Pune - 411026
+                  </span>
+                </p>
+                <p>
+                  <i class="fas fa-phone-alt"></i>Phone
+                  <br />
+                  <span>+91 8308815048</span>
+                </p>
+                <p>
+                  <i class=" far fa-envelope"></i>Email
+                  <br />
+                  <span>swapnilentps@gmail</span>
+                </p>
+              </div>
+              <div class="contact-child child2">
+                <div class="inside-contact">
+                  <h3>
+                    <span id="confirm">
+                    </h3>
+                    <p>
+                      Name *
+                    </p>
+                    <input id="txt_name" type="text" Required="required">
+                    <p>
+                      Email *
+                    </p>
+                    <input id="txt_email" type="text" Required="required">
+                    <p>
+                      Phone *
+                    </p>
+                    <input id="txt_phone" type="text" Required="required">
+                    <p>
+                      Message *
+                    </p>
+                    <textarea id="txt_message" rows="4" cols="20" Required="required"></textarea>
+                    <input type="submit" id="btn_send" value="SEND">
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-  <!-- our product Range -->
-  {% endblock body %}
-  <script src="script.js"></script>
+  </div>
+</div>
+<!-- our product Range -->
+{% endblock body %}
 </body>
 </html>

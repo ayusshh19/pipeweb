@@ -1,9 +1,12 @@
 /* navbar upper region */
+html{
+  font-size: 10px;
+}
 body {
   overflow-x: hidden;
 }
 .left1 {
-  padding: 20px;
+  padding: 2rem;
   font-size: 1.7rem;
   font-family: math;
 }
@@ -37,7 +40,7 @@ hr.one {
   justify-content: space-evenly;
 }
 .navbar-collapse li a {
-  font-size: 20px;
+  font-size: 2rem;
   color: black;
   font-weight: bold;
 }
@@ -49,64 +52,44 @@ hr.one {
 }
 .search {
   width: 100%;
-  height: 50px;
+  height: 5rem;
   background-color: white;
-  border-radius: 30px;
+  border-radius: 3rem;
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 2rem;
   border: 3px solid black;
 }
 .search > i {
-  font-size: 20px;
+  font-size: 2rem;
 
   color: #777;
 }
 .search > input {
   flex: 1;
 
-  height: 40px;
+  height: 4rem;
 
   border: none;
 
   outline: none;
 
-  font-size: 18px;
+  font-size: 1.8rem;
 
-  padding-left: 10px;
+  padding-left: 1rem;
 }
 /* navbar style  */
 /* slide design  */
 .imagehead h2{
   color: #1e3799;
 }
-.shop,.get{
-  text-decoration: none;
-  color: white;
-  border-radius: 4px;
-  font-size: larger;
-      border-radius: 25px;
-      font-weight: 600;
-      transition: all 1s;
 
-}
-.shop{
-  background-color: #1e3799;
-}
-
-.get{
-  background-color: #ee5253;
-}
-.shop:hover,.get:hover{
-  color: white;
-  background-color: #ff9f43;
-}
 .slide img {
   width: 100vh;
-  height: 500px;
+  height: 50rem;
 }
 .speciality {
-  height: 600px;
+  height: 60rem;
   display: grid;
   grid-template-columns: repeat(3, 33.33%);
   grid-template-rows: 50%;
@@ -119,7 +102,7 @@ hr.one {
 .inneritem2,
 .inneritem4,
 .inneritem6 {
-  padding: 35px;
+  padding: 3.5rem;
   background-color: rgb(116, 185, 255, 0.2);
 }
 .inneritem2 h2,
@@ -128,7 +111,7 @@ hr.one {
   color: #1e3799;
 }
 .inneritem2 + .inneritem4 + .inneritem6 p {
-  font-size: 80%;
+  font-size: 4rem;
 }
 .main-content h1 {
   color: #1e3799;
@@ -138,7 +121,55 @@ hr.one {
   width: 100%;
 }
 
+.slide img{
+  width: 10rem;
+  height: 10rem;
+}
+.slide{
+  margin: auto;
+}
+/* main slider  */
+.mainslide{
+    background-color: #013A6B;
+    background-image: -webkit-linear-gradient(30deg, #013A6B 50%, #004E95 50%);
+    height: 40rem;
+}
+.main img{
+  width: 30rem;
+  height: 30rem;
+  margin: auto;
+}
+.main h2{
+  color: white;
+  font-size: 3rem;
+}
+.main p{
+  color: white;
+  font-size: 2rem;
+}
+.shop,.get{
+  text-decoration: none;
+  display: inline;
+  color: white;
+  border-radius: 4px;
+  font-size: larger;
+      border-radius: 2.5rem;
+      font-weight: 600;
+      transition: all 1s;
+}
+.shop{
+  background-color: #1e3799;
+}
 
-
-
-
+.get{
+  background-color: #ee5253;
+}
+.shop:hover,.get:hover{
+  color: white;
+  background-color: #ff9f43;
+}
+.shop a,.get a{
+text-decoration: none;
+color: white;
+}
+/* main slider  */
