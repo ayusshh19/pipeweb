@@ -16,7 +16,7 @@
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
           crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/slick.css' %}">
-    <link rel="stylesheet/less" href="{% static 'css/slick-theme.less' %}">
+    <link rel="stylesheet/" type="text/css" href="{% static 'css/slick-theme.css' %}">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js" defer></script>
     <script type="text/javascript" src="/test/wp-content/themes/child/script/jquery.jcarousel.min.js"defer></script>
     <script src="{% static 'js/main.js' %}" defer></script>
@@ -28,8 +28,8 @@
     {% include "nav.html" %}
     {% block body %}
       <div class="homeslider m-3">
-        <div class="slide m-auto">
-          <img src="{% static 'images/images/pvc/pipe.gif' %}" alt="" srcset="">
+        <div class="slide">
+          <img src="{% static 'images/images/pvc/pipe.gif' %}" class="mx-auto" alt="" srcset="">
           <h5>UPVC PIPE & FITTINGS</h5>
         </div>
         <div class="slide">
@@ -150,7 +150,7 @@
                 ________
               </div>
               <br>
-              <p>
+              <p class="aboutuspara">
                 Established in the year 2003 at Nagpur, Maharashtra, We <strong>“Pune, Maharashtra”</strong> are a Sole Proprietorship based firm, engaged as the foremost Wholesale Trader of Storage Tank, PVC Pipe, etc. Our products are high in demand due to their premium quality, seamless finish, different patterns and affordable prices. Furthermore, we ensure to timely deliver theses products to our clients, through this, we have gained a huge clients base in the market
               </p>
             </div>
