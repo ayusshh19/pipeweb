@@ -1,3 +1,7 @@
+html{
+    font-size: 10px;
+}
+/* accordion */
 .accordion{
     width: 60%;
     margin: auto;
@@ -6,3 +10,11 @@
     font-size: 60%;
     font-weight: 400;
 }
+/* accordion */
+/* product page  */
+
+.page-link{
+    color: #013A6B;
+    font-size: 1.2rem;
+}
+/* product page  */
