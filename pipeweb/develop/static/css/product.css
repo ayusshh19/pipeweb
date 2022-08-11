@@ -1,5 +1,5 @@
 html{
-    font-size: 10px;
+    font-size: 12px;
 }
 /* accordion */
 .accordion{
@@ -18,3 +18,74 @@ html{
     font-size: 1.2rem;
 }
 /* product page  */
+/* cards  */
+.card{
+    width: 25rem;
+    margin: 2rem;
+    position: relative;
+        height: 28rem;
+}
+
+.card-body h5{
+    font-size: 2rem;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+}
+
+.card-body{
+    color: #013A6B;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    position: absolute;
+    width: 100%;
+  height: 7rem;
+  bottom: 0;
+  overflow: hidden;
+  background-color: white;
+  transition: all 1s;
+}
+.card-body h2{
+    font-size: 2rem;
+}
+.card-body p{
+    font-size: 1.2rem;
+}
+.card:hover .card-body{
+    height: 22rem;
+}
+.card-body .quotation{
+    background-color: #013A6B;
+}
+.card-body .quotation,.card-body .call{
+    color: white;
+    font-size: 1.3rem;
+}
+.card-body .call{
+    background-color: #fdcb6e;
+}
+/* card  */
+/* .accordion */
+.accordion .card {
+    overflow: inherit;
+}
+.accordion-body{
+    display: flex;
+    flex-direction: column;
+}
+.accordion-body a{
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+    color: #013A6B;
+}
+.accordion-body a:hover{
+    color: white;
+    background-color: #013A6B;
+}
+.accordion-item button{
+    text-align: center;
+}
+/* .accordion */

@@ -36,7 +36,7 @@
         <div class="collapse navbar-collapse navbar-nav navlist w-100"
              id="navbarSupportedContent">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">
               <img src="{% static 'images/house.png' %}"  alt="" srcset="">
             Home</a>
           </li>
@@ -63,18 +63,7 @@
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
-          <div class="right col-3">
-            <button type="button"
-                    style='height: fit-content;'
-                    class="btn position-relative">
-              <img src="{% static 'images/shoppingcart.png' %}"
-                   style="width: 40px;"
-                   alt=""
-                   srcset="">
-              <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle" style="background-color: #1e3799;"><span class="visually-hidden">unread messages</span>0</span>
-            </span>
-          </button>
-        </div>
+
       </div>
     </div>
   </nav>
