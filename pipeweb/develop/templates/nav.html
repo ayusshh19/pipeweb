@@ -57,10 +57,17 @@
               Products
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/product">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href='{% url "category" categ="UPVC" %}'>UPVC PIPE & FITTINGS</a></li>
+              <li><a class="dropdown-item" href='{% url "category" categ="CPVC" %}'>CPVC PIPE & FITTINGS</a></li>
+              <li><a class="dropdown-item" href='{% url "category" categ="PVC" %}'>PVC PIPE & FITTINGS</a></li>
+              <li><a class="dropdown-item" href='{% url "category" categ="SWR" %}'>SWR PIPE & FITTINGS</a></li>
+              <li><a class="dropdown-item" href='{% url "category" categ="PP" %}'>PP, HDPE PIPE & FITTINGS</a></li>
+              <li><a class="dropdown-item" href='{% url "category" categ="VALVES" %}'>BRASS,CI,MS BALL VALVES</a></li>
+              <li><a class="dropdown-item" href='{% url "category" categ="SINTEX" %}'>SINTEX TANKS</a></li>
+              <li><a class="dropdown-item" href='{% url "category" categ="Clamps" %}'>CLAMPS</a></li>
+              <li><a class="dropdown-item" href='{% url "category" categ="Rubber" %}'>RUBBER GASKET</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="/product">ALL</a></li>
             </ul>
           </li>
 

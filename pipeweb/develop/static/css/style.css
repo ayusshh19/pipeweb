@@ -74,6 +74,13 @@ hr.one {
 }
 /* navbar style  */
 /* slide design  */
+.homeslider a{
+  text-decoration: none;
+}
+.homeslider a h5{
+  font-size: 1.6rem;
+  color: black;
+}
 .imagehead h2{
   color: #1e3799;
 }
@@ -176,7 +183,10 @@ color: white;
 .aboutuspara{
   font-size: 2.5rem;
 }
-
+.sponser h2{
+  color: #1e3799;
+  font-size: 4rem;
+}
 /* about us  */
 @media (min-width:780px) and (max-width:995px) {
   html{
