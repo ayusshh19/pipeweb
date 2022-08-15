@@ -188,6 +188,67 @@ color: white;
   font-size: 4rem;
 }
 /* about us  */
+/* Style all font awesome icons */
+.fa {
+  padding: 2rem;
+  width: 6rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  margin-left: 2rem;
+}
+.footer a{
+  font-size: 2rem;
+}
+.footer{
+   background-color: #dfe6e9;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-facebook:hover{
+  background:white ;
+  color: #3B5998;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+.fa-google:hover {
+  background: white;
+  color: #dd4b39;
+}
+.fa-instagram{
+  background: pink;
+  color: white;
+}
+.fa-instagram:hover{
+  background:white ;
+  color: pink;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.fa-youtube:hover {
+  background:white;
+  color:  #bb0000;
+}
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-twitter:hover {
+  background:white ;
+  color: #55ACEE;
+}
 @media (min-width:780px) and (max-width:995px) {
   html{
     font-size: 7px;
