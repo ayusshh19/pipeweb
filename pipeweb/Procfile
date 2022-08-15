@@ -1,0 +1,2 @@
+web: gunicorn pipeweb.wsgi --log-file -
+release: python manage.py migrate
