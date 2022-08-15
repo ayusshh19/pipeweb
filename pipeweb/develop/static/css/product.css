@@ -56,9 +56,19 @@ html{
 .card:hover .card-body{
     height: 22rem;
 }
-.card-body .quotation{
+.main-link a{
+    text-decoration: none;
     background-color: #013A6B;
+    color: white;
+    font-size: 1.3rem;
 }
+.main-link a:hover{
+    color: #013A6B;
+    background-color: white;
+    border: 2px solid #013A6B ;
+}
+
+
 .card-body .quotation,.card-body .call{
     color: white;
     font-size: 1.3rem;
