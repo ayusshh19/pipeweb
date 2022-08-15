@@ -249,6 +249,15 @@ color: white;
   background:white ;
   color: #55ACEE;
 }
+.whatsapp-float img{
+width: 8rem;
+height: 8rem;
+}
+.whatsapp-float{
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
 @media (min-width:780px) and (max-width:995px) {
   html{
     font-size: 7px;
