@@ -1,0 +1,100 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .main-nav img{
+            width: 8rem;
+            height: 6rem;
+        }
+        .main-nav h1{
+            font-size: 4rem;
+            font-family: cursive;
+            font-weight: bolder;
+            display: flex;
+            align-items: center;
+            color: #1e3799;
+            text-align: center;
+        }
+        .address p{
+            font-size: 1.5rem;
+            color: #1e3799;
+        }
+        .row{
+            display: flex;
+            flex-direction: row;
+        }
+        .row div{
+            display: inline;
+        }
+        .table{
+            border: 0.2rem solid black;
+        }
+        th,td{
+            padding: 1rem;
+        }
+    </style>
+    <title>Html to pdf</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row main-nav m-3">
+            <div class="col-4 float-end"><img class="float-end" src="C:\Users\AYUSH SHUKLA\projects\psgm\Pipe\pipeweb\develop\static\images\images\swapnillogo.png" alt="" srcset=""></div>
+            <div class="col-8"><h1>Swapnil Enterprices</h1></div>
+        </div>
+        <div class="address m-5">
+            <p><Strong>Address: </Strong>Plot No.71/1/B/2&3,Unit No:5,G Block,Khira Industraial Premises CO-OP Soc,MIDC, Bhosari,Pune - 411026</p>
+            <p><strong>Phone Number: </strong>+91 8308815048</p>
+            <p><strong>Email: </strong>swapnilentps@gmail </p>
+            <p><strong>Date: </strong>{{date}}</p>
+        </div>
+        <div class="qoutation m-5">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Product Id</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">{{order_id}}</th>
+                    <td>{{product}}</td>
+                    <td>{{size}}</td>
+                    <td>{{desc}}</td>
+                    <td>{{price}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>
+<!-- <div class="container">
+    <div class="contact-parent">
+      <div class="contact-child child1">
+        <p>
+          <i class="fas fa-map-marker-alt"></i> Address
+          <br />
+          <span> Plot No.71/1/B/2&3,Unit No:5,
+            <br>
+            G Block,Khira Industraial Premises CO-OP Soc,MIDC, Bhosari,Pune - 411026
+          </span>
+        </p>
+        <p>
+          <i class="fas fa-phone-alt"></i>Phone
+          <br />
+          <span>+91 8308815048</span>
+        </p>
+        <p>
+          <i class=" far fa-envelope"></i>Email
+          <br />
+          <span>swapnilentps@gmail</span>
+        </p>
+      </div> -->

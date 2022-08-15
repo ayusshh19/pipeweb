@@ -2,8 +2,56 @@ from django.shortcuts import render
 from develop.models import products
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.db.models import Q
+# for generating pdf invoice
+from io import BytesIO
+from django.http import HttpResponse
+from django.template.loader import get_template
+from xhtml2pdf import pisa
+import os
+import datetime
 
-PRODUCTS_PER_PAGE = 24
+
+def render_to_pdf(template_src, context_dict={}):
+    template = get_template(template_src)
+    html  = template.render(context_dict)
+    result = BytesIO()
+    pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), result)#, link_callback=fetch_resources)
+    if not pdf.err:
+        return HttpResponse(result.getvalue(), content_type='application/pdf')
+    return None
+
+def generatepdf(request,id):
+        try:
+            order_db = products.objects.get(id = id)     #you can filter using order_id as well
+        except:
+            return HttpResponse("505 Not Found")
+
+        data = {
+            'order_id': order_db.id,
+            'product': order_db.product,
+            'date': str(datetime.date.today()),
+            'size': order_db.size,
+            'desc': order_db.desc,
+            'price': order_db.price,
+        }
+        pdf = render_to_pdf('pdf.html', data)
+        #return HttpResponse(pdf, content_type='application/pdf')
+
+        # force download
+        if pdf:
+            response = HttpResponse(pdf, content_type='application/pdf')
+            filename = "Qoutation_%s.pdf" %(data['order_id'])
+            content = "inline; filename='%s'" %(filename)
+            #download = request.GET.get("download")
+            #if download:
+            content = "attachment; filename=%s" %(filename)
+            response['Content-Disposition'] = content
+            return response
+        return HttpResponse("Not found")
+
+PRODUCTS_PER_PAGE = 30
+def test(request):
+    return render(request,'pdf.html')
 # Create your views here.
 def home(request):
     return render(request,'index.html')
