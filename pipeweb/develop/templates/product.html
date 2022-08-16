@@ -10,7 +10,7 @@
 {% block body %}
   <!-- catehory  -->
   <div class="row">
-    <div class="col-4">
+    <div class="col-3">
       <h1 class="text-center m-5">Categories</h1>
       <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
@@ -249,6 +249,11 @@
       </div>
     </div>
     <!-- category  -->
+    <div class="whatsapp-float">
+      <a href="http://wa.me/919892250482" target="_blank" rel="noopener noreferrer">
+        <img src="{% static 'images/wp.png' %}" alt="" srcset="">
+      </a>
+    </div>
     <!-- product item  -->
     <div class="col-8">
       <div class="container">
@@ -304,9 +309,9 @@
                         <a href='{% url "pdf" id=item.id %}' class="qoutation p-3">Get Quotation</a>
                       </div>
                       <div class="col-6 call-link text-center">
-                        <button type="button" class="btn call">
+                        <a href='' class="call p-3">
                           Call Now
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>

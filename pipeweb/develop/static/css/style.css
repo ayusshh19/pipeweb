@@ -257,6 +257,7 @@ height: 8rem;
   position: fixed;
   bottom: 1rem;
   right: 1rem;
+  z-index: 1;
 }
 @media (min-width:780px) and (max-width:995px) {
   html{
