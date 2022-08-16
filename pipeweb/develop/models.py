@@ -1,3 +1,4 @@
+from email.mime import image
 from itertools import product
 from django.db import models
 
@@ -8,4 +9,4 @@ class products(models.Model):
     type=models.CharField(max_length=100)
     desc=models.CharField(max_length=255)
     price=models.CharField(max_length=100)
-    
+    image=models.CharField(max_length=100)

@@ -258,6 +258,16 @@ height: 8rem;
 }
 .whatsapp-float{
   position: fixed;
+  bottom: 10rem;
+  right: 1rem;
+  z-index: 1;
+}
+.india-float img{
+  width: 7rem;
+height: 7rem;
+}
+.india-float{
+  position: fixed;
   bottom: 1rem;
   right: 1rem;
   z-index: 1;

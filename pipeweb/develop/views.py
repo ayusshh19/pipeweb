@@ -9,7 +9,7 @@ from django.template.loader import get_template
 from xhtml2pdf import pisa
 import os
 import datetime
-
+PRODUCTS_PER_PAGE = 32
 
 def render_to_pdf(template_src, context_dict={}):
     template = get_template(template_src)
@@ -49,7 +49,7 @@ def generatepdf(request,id):
             return response
         return HttpResponse("Not found")
 
-PRODUCTS_PER_PAGE = 30
+
 def test(request):
     return render(request,'pdf.html')
 # Create your views here.

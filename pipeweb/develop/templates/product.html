@@ -213,9 +213,9 @@
                aria-labelledby="flush-headingnine"
                data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
-              <a href='{% url "category" categ="RING TYPE" %}'>RING TYPE</a>
-              <a href='{% url "category" categ="FULL FACE" %}'>FULL FACE</a>
-              <a href='{% url "category" categ="RUBBER SHEETS" %}'>RUBBER SHEETS</a>
+              <a href='{% url "category" categ="RING" %}'>RING TYPE</a>
+              <a href='{% url "category" categ="FULL" %}'>FULL FACE</a>
+              <a href='{% url "category" categ="RUBBER" %}'>RUBBER SHEETS</a>
             </div>
           </div>
         </div>
@@ -254,6 +254,11 @@
         <img src="{% static 'images/wp.png' %}" alt="" srcset="">
       </a>
     </div>
+    <div class="india-float">
+      <a href="https://www.indiamart.com/swapnil-enterprises-pune/about-us.html" target="_blank" rel="noopener noreferrer">
+        <img src="{% static 'images/indiamart.jpeg' %}" alt="" srcset="">
+      </a>
+    </div>
     <!-- product item  -->
     <div class="col-8">
       <div class="container">
@@ -287,7 +292,7 @@
           {% for item in product %}
             <div class="col-3">
               <div class="card">
-                <img src="{% static 'images/images/pvc/pipe.gif' %}"
+                <img src="{% static 'images/images/'  %}{{item.image}}"
                      class="card-img-top"
                      alt="{% static 'images/images/pvc/pipe.gif' %}">
                 <div class="card-body">
@@ -297,20 +302,20 @@
                   <p class="card-text">
                     {{ item.type }}
                   </p>
-                  <div class="card-inner">
+                  <div class="card-inner" >
                     <p>
                       <strong>Desciption:</strong> {{ item.desc }}
                     </p>
                     <p>
                       <strong>Price:</strong> {{ item.price }}
                     </p>
-                    <div class="row my-4">
+                    <div  class="row buttonboth  my-4" >
                       <div class="col-6 main-link text-center ">
                         <a href='{% url "pdf" id=item.id %}' class="qoutation p-3">Get Quotation</a>
                       </div>
                       <div class="col-6 call-link text-center">
                         <a href='' class="call p-3">
-                          Call Now
+                          Call Now <img src="{% static 'images/phone-call.png' %}" alt="" srcset="">
                         </a>
                       </div>
                     </div>
