@@ -325,10 +325,10 @@
             </div>
           {% endfor %}
         </div>
-        <div class="pageno my-3">
+        <div class="pageno m-auto">
           {% if is_paginated %}
-            <nav class="pagination">
-              <ul class="pagination">
+            <nav class="pagination ">
+              <ul class="pagination ">
                 {% if page_obj.has_previous %}
                   <li class="page-item">
                     <a class="page-link"
@@ -340,14 +340,14 @@
                 {% for i in paginator.page_range %}
                   {% if i == page_obj.number %}
                     {% if forloop.counter < 5 %}
-                      <li class="page-item active" aria-current="page">
+                      <li class="page-item main" aria-current="page">
                         <a class="page-link"
                            href="/product/?page={{i}}"
                            span
                            class="visually-hidden">{{i}}</span></a>
                       </li>
                     {% else %}
-                      <li class="page-item">
+                      <li class="page-item main">
                         <a class="page-link" href="/product/?page={{i}}">{{i }}</a>
                       </li>
                     {% endif %}

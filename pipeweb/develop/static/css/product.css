@@ -108,7 +108,28 @@ html{
     text-align: center;
 }
 /* .accordion */
-
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination a{
+  background-color: #013A6B;
+  width: 10rem;
+  height: 5rem;
+  margin: 2rem;
+  color: white;
+  border-radius: 10rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.pagination .main a{
+  background-color: #fdcb6e;
+  width: 5rem;
+}
+.pagination a:hover{
+  color: white;
+}
 @media (min-width:950px) and (max-width:1300px) {
     html{
       font-size: 7px;
