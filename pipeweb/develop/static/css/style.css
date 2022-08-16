@@ -6,8 +6,11 @@ html{
 
 .left1 {
   padding: 2rem;
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-family: math;
+}
+.left1 img,.nav-item img{
+  width: 2.5rem;
 }
 .cen {
   font-size: 4rem;
