@@ -36,8 +36,14 @@ html{
 }
 .whatsapp-float{
     position: fixed;
-    bottom: 8rem;
-    right: 2rem;
+    bottom: 10rem;
+    left: 1rem;
+  }
+  .india-float{
+    position: fixed;
+    bottom: 2rem;
+    left: 1rem;
+    z-index: 1;
   }
 .card-body{
     color: #013A6B;
@@ -148,6 +154,9 @@ html{
   @media (max-width:460px){
     html{
       font-size: 3px;
+    }
+    .righthand{
+      display: block;
     }
     
   }

@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Swapnil Enterprices</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+    type="text/css"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+    crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+    crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/contact.css' %}">
     <link rel="stylesheet" href="{% static 'css/demo.css' %}">
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet"
-          type="text/css"
-          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-          
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-          crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-          crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/slick.css' %}">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="stylesheet/"
@@ -141,14 +141,52 @@
           </div>
         </div>
         <div class="slide main">
-          <img src="{% static 'images/images/clamps&Gasket/rubbersheetNeoprene.jpg' %}"
-               alt=""
-               srcset="">
+          <div class="row p-5">
+            <div class="col-5">
+              <h2>Our Treanding products</h2>
+              <p>
+                Piping class or Pipe Class is a document that specifies the type of the components such as a type of pipe, schedule, material, flange ratings, branch types, valve types and valve trim material, gasket, and all the other components specific requirements to be used for different fluids under different operating conditions in a plant.
+              </p>
+              <div class="buttonslog m-5">
+                <div class="shop mx-2 p-4">
+                  <a href="http://">Shop Now</a>
+                </div>
+                <div class="get mx-2 p-4">
+                  <a href="http://">Quotation</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-7 m-auto">
+              <img src="{% static 'images/slide3.png' %}"
+                   alt=""
+                   class=" text-center"
+                   srcset="">
+            </div>
+          </div>
         </div>
         <div class="slide main">
-          <img src="{% static 'images/images/clamps&Gasket/rubbersheetNeoprene.jpg' %}"
-               alt=""
-               srcset="">
+          <div class="row p-5">
+            <div class="col-5">
+              <h2>Our Treanding products</h2>
+              <p>
+                Piping class or Pipe Class is a document that specifies the type of the components such as a type of pipe, schedule, material, flange ratings, branch types, valve types and valve trim material, gasket, and all the other components specific requirements to be used for different fluids under different operating conditions in a plant.
+              </p>
+              <div class="buttonslog m-5">
+                <div class="shop mx-2 p-4">
+                  <a href="http://">Shop Now</a>
+                </div>
+                <div class="get mx-2 p-4">
+                  <a href="http://">Quotation</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-7 m-auto">
+              <img src="{% static 'images/slide3.png' %}"
+                   alt=""
+                   class=" text-center"
+                   srcset="">
+            </div>
+          </div>
         </div>
       </div>
       <!-- image corousal  -->
@@ -336,6 +374,20 @@
 <!-- sponcer  -->
 {% include 'footer.html' %}
 <!-- our product Range -->
+<!-- <script defer language="JavaScript" type="text/javascript">
+  //Resize window
+function resize() {
+  if (jQuery(window).width() < 700) {
+    jQuery('.righthand').removeClass('col-4').addClass('col-12');
+  }
+}
+
+//watch window resize
+jQuery(window).on('resize', function() {
+  resize()
+  console.log(window)
+});
+</script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous" defer></script>
 {% endblock body %}
 </body>

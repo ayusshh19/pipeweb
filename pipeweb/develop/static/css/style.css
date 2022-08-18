@@ -28,6 +28,11 @@ hr.one {
   border-top: 4px solid #0c35d8;
   margin: 0px;
 }
+.righthand{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* navbar upper region */
 /* navbar style  */
 .navhead {
@@ -46,12 +51,7 @@ hr.one {
   color: black;
   font-weight: bold;
 }
-.righthand{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
+
 .search {
   width: 100%;
   height: 5rem;
@@ -141,7 +141,7 @@ hr.one {
 .mainslide{
     background-color: #013A6B;
     background-image: -webkit-linear-gradient(30deg, #013A6B 50%, #004E95 50%);
-    height: 40rem;
+    height: 45rem;
 }
 .main img{
   width: 30rem;
@@ -254,23 +254,24 @@ color: white;
   color: #55ACEE;
 }
 .whatsapp-float img{
-width: 8rem;
-height: 8rem;
+width: 10rem;
+height: 10rem;
+
 }
 .whatsapp-float{
   position: fixed;
   bottom: 10rem;
-  right: 1rem;
+  right: 5rem;
   z-index: 1;
 }
 .india-float img{
-  width: 7rem;
-height: 7rem;
+  width: 8rem;
+height: 8rem;
 }
 .india-float{
   position: fixed;
   bottom: 1rem;
-  right: 1rem;
+  right: 5rem;
   z-index: 1;
 }
 @media (min-width:780px) and (max-width:995px) {
@@ -285,6 +286,43 @@ height: 7rem;
 }
 @media (max-width:460px){
   html{
-    font-size: 3px;
+    font-size: 8px;
+    overflow-x: hidden;
   }
+  ::-webkit-scrollbar:horizontal {
+    display: none;
+  }
+  .righthand{
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  .left1{
+    display: block;
+    width: 100%;
+    padding: 0%;
+  }
+  .cen{
+    display: block;
+    width: 100%;
+    margin: 1rem;
+  }
+
+  .mainslide h2{
+    font-size: 2.1rem;
+  }
+  .mainslide p{
+    font-size: 1.2rem;
+  }
+  .shop,.get{
+    text-decoration: none;
+    display: inline;
+    color: white;
+    font-size: larger;
+        border-radius: 2.5rem;
+        font-weight: 600;
+        transition: all 1s;
+        margin: 10rem;
+  }
+
 }
