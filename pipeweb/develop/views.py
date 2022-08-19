@@ -1,3 +1,5 @@
+import email
+from unicodedata import name
 from django.shortcuts import render
 from develop.models import products
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
@@ -10,6 +12,7 @@ from xhtml2pdf import pisa
 import os
 import datetime
 from django.db.models import Count
+from django.core.mail import send_mail
 PRODUCTS_PER_PAGE = 32
 
 def render_to_pdf(template_src, context_dict={}):
@@ -55,13 +58,21 @@ def test(request):
     return render(request,'pdf.html')
 # Create your views here.
 def home(request):
+    new_mail=False
+    if request.method=='POST':
+        name =request.POST['name']
+        email_id =request.POST['email']
+        phone =request.POST['phone']
+        message =request.POST['message']+' sent by user '+email_id
+        send_mail('somebody tried to contact you!!',message,email_id,['cm.b.49ayush.shukla@gmail.com'],fail_silently=False)
+        new_mail=True
     UPVC=products.objects.filter(('{}__icontains'.format("desc"), 'UPVC')).count()
     CPVC=products.objects.filter(('{}__icontains'.format("desc"), 'CPVC')).count()
     PVC=products.objects.filter(('{}__icontains'.format("desc"), 'PVC')).count()
     TANK=products.objects.filter(('{}__icontains'.format("desc"), 'TANK')).count()
     RUBBER=products.objects.filter(('{}__icontains'.format("desc"), 'RUBBER')).count()
     print({'upvc':UPVC,'cpvc':CPVC,'pvc':PVC,'tank':TANK,'rubber':RUBBER})
-    return render(request,'index.html',{'upvc':UPVC,'cpvc':CPVC,'pvc':PVC,'tank':TANK,'rubber':RUBBER})
+    return render(request,'index.html',{'upvc':UPVC,'cpvc':CPVC,'pvc':PVC,'tank':TANK,'rubber':RUBBER,'new_mail':new_mail})
 
 def product(request,categ=None):
     product=products.objects.all()

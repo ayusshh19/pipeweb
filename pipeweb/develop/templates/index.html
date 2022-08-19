@@ -38,6 +38,21 @@
   <body >
     {% include "nav.html" %}
     {% block body %}
+    
+    {% if new_mail %}
+    <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
+      <div class="toast-header">
+        <img src="{% static 'images/images/swapnillogo.png' %}" class="rounded me-2" style="width: 3.2em;" alt="...">
+        <strong class="me-auto" style="color: #1e3799;font-size:2rem;">Swapnil Enterprices</strong>
+        <small style="    font-size: 1.5rem;">Just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" style="    font-size: 1.5rem;"></button>
+      </div>
+      <div class="toast-body" style="font-size: 2.5rem;">
+        Hey thanks for contacting Us will contact you soon!!
+      </div>
+    </div>
+    {% endif %}
+      
       <div class="homeslider m-3">
         <div class="slide">
           <a href='{% url "category" categ="UPVC" %}'>
@@ -416,28 +431,31 @@
             </div>
             <div class="contact-child child2">
               <div class="inside-contact">
-                <h3>
-                  <span id="confirm">
-                  </h3>
-                  <p>
-                    Name *
-                  </p>
-                  <input id="txt_name" type="text" Required="required">
-                  <p>
-                    Email *
-                  </p>
-                  <input id="txt_email" type="text" Required="required">
-                  <p>
-                    Phone *
-                  </p>
-                  <input id="txt_phone" type="text" Required="required">
-                  <p>
-                    Message *
-                  </p>
-                  <textarea id="txt_message" rows="4" cols="20" Required="required"></textarea>
-                  <input type="submit" id="btn_send" value="SEND">
+                  <form action="" method="post">
+                    {% csrf_token %}
+                  <h3>
+                    <span id="confirm">
+                    </h3>
+                    <p>
+                      Name *
+                    </p>
+                    <input id="txt_name" type="text" name="name" Required="required">
+                    <p>
+                      Email *
+                    </p>
+                    <input id="txt_email" type="text" name="email" Required="required">
+                    <p>
+                      Phone *
+                    </p>
+                    <input id="txt_phone" type="text" name="phone" Required="required">
+                    <p>
+                      Message *
+                    </p>
+                    <textarea id="txt_message" rows="4" cols="20" name="message" Required="required"></textarea>
+                    <input type="submit" id="btn_send" value="SEND">
+                  </form>
+                  </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>
@@ -509,6 +527,16 @@ jQuery(window).on('resize', function() {
   console.log(window)
 });
 </script> -->
+<script>
+  window.onload = (event) => {
+    let myAlert = document.querySelector('.toast');
+    let bsAlert = new bootstrap.Toast(myAlert);
+    
+    setTimeout(function () {
+        bsAlert.show();
+    }, 5000);
+};
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous" defer></script>
 {% endblock body %}
 </body>

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from re import T
 import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -130,3 +131,10 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 django_heroku.settings(locals())
+
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST_USER='cm.b.49ayush.shukla@gmail.com'
+EMAIL_HOST_PASSWORD='tigsuciuchmvtfpt'
+EMAIL_USE_TLS=True
+EMAIL_POST=587
