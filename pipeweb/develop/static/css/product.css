@@ -155,9 +155,7 @@ html{
     html{
       font-size: 3px;
     }
-    .righthand{
-      display: block;
-    }
+    
     
   }
   @media (max-width:360px){

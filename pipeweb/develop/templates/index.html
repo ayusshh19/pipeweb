@@ -32,6 +32,129 @@
     <script type="text/javascript" src="/test/wp-content/themes/child/script/jquery.jcarousel.min.js"defer></script>
     <script src="{% static 'js/slick.min.js' %}" defer type="text/javascript"></script>
     <script src="{% static 'js/main.js' %}" defer type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" defer></script>
+    <script defer>
+      jQuery( function() {
+        
+        var availableTags=[
+        "PIPE (3mtr)",
+        "COUPLER ",
+        "Elbow 45°",
+        "TEE ",
+        "FAPT",
+        "BALL VALVE",
+        "ELBOW  (90deg)",
+        "MAPT",
+        "UNION",
+        "FAB BENDSCH80(PLAIN ENDS)",
+        "END CAP",
+        "TANK ADAPTER",
+        "CROSS",
+        "STEP OVER BEND",
+        "TANK ADAPTER(PIPE THD STYLE)",
+        "RED TEE ",
+        "RED BUSH",
+        "REDUCER COUPLING",
+        "VANSTONE FLANGE",
+        "HUB",
+        "BLIND FLANGE",
+        "MTA(BRASS THD)",
+        "FTA(BRASS THD)",
+        "BRASS TEE",
+        "BRASS ELBOW",
+        "RED ELBOW",
+        "METAL CLIPS",
+        "TANK ADAPTER(SOCKET TYPE)",
+        "TEFLON TAPE",
+        "SLOVENT CEMENT (705)",
+        "SLOVENT CEMENT (717)",
+        "SLOVENT CEMENT (735)",
+        "PRIMER (P-70)",
+        "SCH 40 PIPE (5 MTR)",
+        "SCH 80 PIPE (5 MTR)",
+        "EQUAL TEE",
+        "ELBOW 45 DEG",
+        "COUPLING",
+        "FEMALE ADAPTER (PLASTIC THD)",
+        "MALE ADAPTER(PLASTIC THD)",
+        "END CAPS",
+        "HUB (SOC)",
+        "ELBOW 90 DEG",
+        "VANSTON FLANGE SOCKET",
+        ".REDUCING COUPLING (SOC)",
+        "REDUCER BUSHING (SOC)",
+        "REDUCING TEE (SOC)",
+        "ADHESIVE SOLUTION (SOLUTION 717)",
+        "ADHESIVE SOLUTION (PRIMER P 70) ",
+        "PIPE SDR11  (3MTR)",
+        "RED  ELBOW",
+        "LONG RADIUS BEND",
+        "REDUCER",
+        "BRASS COUPLING",
+        "BRASS EXTN ELBOW",
+        "BRASS MALE ELBOW",
+        "BRASS MALE TEE",
+        "CONCEALED VALVE(CHROME PLATED)",
+        "CONCEALED VALVE(WHEEL TYPE)",
+        "METAL CLIP",
+        "TANK ADAPTOR",
+        "TRANSITION BUSH",
+        "PIPE (5mtr)",
+        "ELBOW",
+        "TRANSITION BUSH(IPS/CTS)",
+        "ELBOW 45 DEGEREE ",
+        "FAPT(SCH80)",
+        "MALE ADAPTOR(BRASS THREADED)",
+        "FEMALE ADAPTER (BRASS THD)",
+        "SOLVENT(CTS500-YELLOW)",
+        "SOLVENT(724)",
+        "PRIMER P-70",
+        "END PLUG THD",
+        "ELBOW HOLDER",
+        "TEE HOLDER",
+        "PLASTIC STRAP",
+        "ASTRAL- CROZEN SCH 80PIPE  (5MTR)",
+        "FEMALE ADAPTER(PLASTIC)",
+        "MALE ADAPTER",
+        "BLIND  FLANGE",
+        "VABSTON FLANGE SOCKET",
+        "ASTRAL -CROZEN SCH 40 PIPE (5MTR)",
+        "REDUCING COUPLING ",
+        "REDUCING BUSHING ",
+        "REDUCING TEE",
+        "ADHESIVE SOLUTION ",
+        "PIPE",
+        "M.T.A",
+        "F.T.A",
+        "ONLY  FLANGE",
+        "FLANGE  WITH  STUBEND",
+        "END  CAP  PLAIN",
+        "BALL  VALVE  UNION  TYPE",
+        "BALL  VALVE  COMPACT",
+        "N.R. V",
+        "RUBBER  GASKET .",
+        "RED.BUSH",
+        "REDUCER .",
+        "HOSE NIPPLE",
+        "BLACK  CLAMP",
+        "END  PLUG  BLACK",
+        "PIPE  CLIP  WITH  NUT",
+        "TANK  CONNECTOR   PP  MOULD",
+        "SOCKET",
+        "N.R.V  SCH"
+        ]
+          
+        jQuery('#search').on('input', function() { 
+          jQuery( "#search" ).autocomplete({
+            source: availableTags
+          });
+          jQuery('#search').change(function(){
+            jQuery('#searchform').submit()
+        });
+      });
+      } );
+    </script>
     {% block staticin %}
     {% endblock staticin %}
   </head>

@@ -13,6 +13,9 @@ import os
 import datetime
 from django.db.models import Count
 from django.core.mail import send_mail
+from django.http import JsonResponse
+from develop.serializers import prodt
+
 PRODUCTS_PER_PAGE = 32
 
 def render_to_pdf(template_src, context_dict={}):
@@ -138,3 +141,24 @@ def category(request,categ):
     except:
         product = product_paginator.page(PRODUCTS_PER_PAGE)
     return render(request,'product.html',{"product":product, 'page_obj':product, 'is_paginated':True, 'paginator':product_paginator})
+
+def productlist(request):
+    product_list = products.objects.values_list('product', flat=True).distinct()
+    product_list=list(product_list)
+    return JsonResponse(product_list,safe=False)
+    
+    
+def searchproduct(request):
+    if request.method=='POST':
+      data=request.POST['search']
+      product=products.objects.filter(('{}__icontains'.format("product"), data)).order_by('price')
+      page = request.GET.get('page',1)
+      product_paginator = Paginator(product, PRODUCTS_PER_PAGE)
+      try:
+          product = product_paginator.page(page)
+          print(product_paginator)
+      except EmptyPage:
+          product = product_paginator.page(product_paginator.num_pages)
+      except:
+          product = product_paginator.page(PRODUCTS_PER_PAGE)
+      return render(request,'product.html',{"product":product, 'page_obj':product, 'is_paginated':True, 'paginator':product_paginator})

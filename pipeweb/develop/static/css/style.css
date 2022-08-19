@@ -3,7 +3,20 @@ html{
   font-size: 10px;
   overflow-x: hidden;
 }
-
+ul.ui-autocomplete {
+  -moz-border-radius: 15px;
+  list-style-type: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: white;
+  padding: 1rem;
+  width: 10rem;
+  border-radius: 15px;
+  z-index: 1;
+}
+ul.ui-autocomplete >li{
+  color: #004E95;
+}
 .left1 {
   padding: 2rem;
   font-size: 2rem;

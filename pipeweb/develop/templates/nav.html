@@ -9,13 +9,17 @@
       </div>
       <div class="cen col-5 text-center" style="color: #1e3799;"><img style="width: 8rem;" class="m-2" src="{% static 'images/images/swapnillogo.png' %}" alt=""> Swapnil Enterprises</div>
       <div class="righthand col-4 m-1">
-        <li class="nav-item search">
-          <input type="search"
-                 name='search'
-                 placeholder="Search your Product"
-                 aria-label="Search">
-          <i class="fa fa-search" aria-hidden="true"></i>
-        </li>
+        <form action="{% url 'search' %}" id="searchform" method="post">
+          {% csrf_token %}
+          <li class="nav-item search">
+            <input type="search"
+                   name='search'
+                   id="search"
+                   placeholder="Search your Product"
+                   aria-label="Search" autocomplete="on">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </li>
+        </form>
       </div>
     </div>
     <!-- logo content -->
