@@ -315,14 +315,29 @@ height: 8rem;
     font-size: 1.2rem;
   }
   .shop,.get{
-    text-decoration: none;
-    display: inline;
-    color: white;
-    font-size: larger;
-        border-radius: 2.5rem;
-        font-weight: 600;
-        transition: all 1s;
         margin: 10rem;
   }
 
+}
+.product .card{
+  margin: auto;
+  width: 36rem;
+  margin: 2rem;
+}
+.product .card img{
+  height:15rem;
+  width: 15rem;
+}
+.product .card h5{
+  font-size: 2rem;
+}
+.more{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.product a{ text-decoration: none;
+color: black;
 }

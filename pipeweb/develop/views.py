@@ -9,6 +9,7 @@ from django.template.loader import get_template
 from xhtml2pdf import pisa
 import os
 import datetime
+from django.db.models import Count
 PRODUCTS_PER_PAGE = 32
 
 def render_to_pdf(template_src, context_dict={}):
@@ -54,7 +55,13 @@ def test(request):
     return render(request,'pdf.html')
 # Create your views here.
 def home(request):
-    return render(request,'index.html')
+    UPVC=products.objects.filter(('{}__icontains'.format("desc"), 'UPVC')).count()
+    CPVC=products.objects.filter(('{}__icontains'.format("desc"), 'CPVC')).count()
+    PVC=products.objects.filter(('{}__icontains'.format("desc"), 'PVC')).count()
+    TANK=products.objects.filter(('{}__icontains'.format("desc"), 'TANK')).count()
+    RUBBER=products.objects.filter(('{}__icontains'.format("desc"), 'RUBBER')).count()
+    print({'upvc':UPVC,'cpvc':CPVC,'pvc':PVC,'tank':TANK,'rubber':RUBBER})
+    return render(request,'index.html',{'upvc':UPVC,'cpvc':CPVC,'pvc':PVC,'tank':TANK,'rubber':RUBBER})
 
 def product(request,categ=None):
     product=products.objects.all()
