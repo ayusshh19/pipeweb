@@ -346,13 +346,13 @@ height: 8rem;
   background-color: rgb(116, 185, 255, 0.2);
 }
 .inneritem2 p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .inneritem4 p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .inneritem6 p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
   .mainslide{
     height: 40rem;
@@ -364,8 +364,8 @@ height: 8rem;
     font-size: 1.2rem;
   }
   .mainslide img{
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
   }
   .shop,.get{
     text-decoration: none;
@@ -376,6 +376,7 @@ height: 8rem;
         border-radius: 2.5rem;
         font-weight: 600;
         transition: all 1s;
+        padding: 1rem !important;
   }
   .speciality .item{
     font-size: .1rem;
@@ -394,7 +395,27 @@ height: 8rem;
     display: flex;
     justify-content: center;
   }
-
+  .fa {
+    padding: 1.5rem;
+    width: 5rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin-left: 1.5rem;
+  }
+  .mainslide .col-5{
+    width: 50%;
+  }
+  .mainslide .col-7{
+    width: 50%;
+  }
+  .shop,.get{
+    display: block;
+    margin: 1rem;
+  }
+  .mainslide .m-5{
+    margin: 1rem !important;
+  }
 }
 .product .card{
   margin: auto;
