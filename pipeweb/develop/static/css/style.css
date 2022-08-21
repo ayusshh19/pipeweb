@@ -87,6 +87,7 @@ hr.one {
   outline: none;
   font-size: 1.8rem;
   padding-left: 1rem;
+  padding-right: 1rem;
 }
 /* navbar style  */
 /* slide design  */
@@ -297,10 +298,13 @@ height: 8rem;
     font-size: 5px;
   }
 }
-@media (max-width:460px){
+@media (max-width:480px){
   html{
     font-size: 8px;
     overflow-x: hidden;
+  }
+  body {
+    overflow: hidden; /* Hide scrollbars */
   }
   ::-webkit-scrollbar:horizontal {
     display: none;
@@ -310,6 +314,7 @@ height: 8rem;
     width: 100%;
     padding: 0;
   }
+
   .left1{
     display: block;
     width: 100%;
@@ -320,15 +325,74 @@ height: 8rem;
     width: 100%;
     margin: 1rem;
   }
-
+  .righthand .col-4{
+    width: 100%;
+  }
+  .search {
+    width: calc(100% - 40px);
+    height: 6rem;
+    background-color: white;
+    border-radius: 3rem;
+    border: 3px solid black;
+    margin: 2rem;
+  }
+  .speciality{
+    height: 50rem;
+  }
+  .inneritem2,
+.inneritem4,
+.inneritem6 {
+  padding: 1.5rem;
+  background-color: rgb(116, 185, 255, 0.2);
+}
+.inneritem2 p {
+  font-size: 1.5rem;
+}
+.inneritem4 p {
+  font-size: 1.5rem;
+}
+.inneritem6 p {
+  font-size: 1.5rem;
+}
+  .mainslide{
+    height: 40rem;
+  }
   .mainslide h2{
-    font-size: 2.1rem;
+    font-size: 2.4rem;
   }
   .mainslide p{
     font-size: 1.2rem;
   }
+  .mainslide img{
+    width: 20rem;
+    height: 20rem;
+  }
   .shop,.get{
-        margin: 10rem;
+    text-decoration: none;
+    display: inline;
+    color: white;
+    border-radius: 2px;
+    font-size: larger;
+        border-radius: 2.5rem;
+        font-weight: 600;
+        transition: all 1s;
+  }
+  .speciality .item{
+    font-size: .1rem;
+  }
+  .product .col-4{
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .product .more{
+    margin: auto;
+    text-align: center;
+  }
+  .product .col-4 a{
+    display: flex;
+    justify-content: center;
   }
 
 }
