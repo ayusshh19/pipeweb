@@ -416,6 +416,9 @@ height: 8rem;
   .mainslide .m-5{
     margin: 1rem !important;
   }
+  .whatsapp-float,.india-float{
+    right: 1rem;
+  }
 }
 .product .card{
   margin: auto;
