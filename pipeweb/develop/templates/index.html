@@ -161,21 +161,29 @@
   <body >
     {% include "nav.html" %}
     {% block body %}
-    
-    {% if new_mail %}
-    <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
-      <div class="toast-header">
-        <img src="{% static 'images/images/swapnillogo.png' %}" class="rounded me-2" style="width: 3.2em;" alt="...">
-        <strong class="me-auto" style="color: #1e3799;font-size:2rem;">Swapnil Enterprices</strong>
-        <small style="    font-size: 1.5rem;">Just now</small>
-        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" style="    font-size: 1.5rem;"></button>
-      </div>
-      <div class="toast-body" style="font-size: 2.5rem;">
-        Hey thanks for contacting Us will contact you soon!!
-      </div>
-    </div>
-    {% endif %}
-      
+      {% if new_mail %}
+        <div role="alert"
+             aria-live="assertive"
+             aria-atomic="true"
+             class="toast"
+             data-bs-autohide="false">
+          <div class="toast-header">
+            <img src="{% static 'images/images/swapnillogo.png' %}"
+                 class="rounded me-2"
+                 style="width: 3.2em;"
+                 alt="...">
+            <strong class="me-auto" style="color: #1e3799;font-size:2rem;">Swapnil Enterprices</strong>
+            <small style="    font-size: 1.5rem;">Just now</small>
+            <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="toast"
+                    aria-label="Close"
+                    style="font-size: 1.5rem;">
+            </button>
+          </div>
+          <div class="toast-body" style="font-size: 2.5rem;">Hey thanks for contacting Us will contact you soon!!</div>
+        </div>
+      {% endif %}
       <div class="homeslider m-3">
         <div class="slide">
           <a href='{% url "category" categ="UPVC" %}'>
@@ -308,7 +316,9 @@
         <div class="slide main">
           <div class="row p-5">
             <div class="col-5">
-              <h2>Our Treanding products</h2>
+              <h2>
+                Our Treanding products
+              </h2>
               <p>
                 Piping class or Pipe Class is a document that specifies the type of the components such as a type of pipe, schedule, material, flange ratings, branch types, valve types and valve trim material, gasket, and all the other components specific requirements to be used for different fluids under different operating conditions in a plant.
               </p>
@@ -390,18 +400,18 @@
               <div class="card">
                 <div class="row">
                   <img src="{% static 'images/images/pipe.gif' %}"
-                     class="card-img-top col-6"
-                     alt="...">
-                <div class="card-body col-6">
-                  <p class="card-text">
-                    <h5>
-                      UPVC PIPE & FITTINGS
-                    </h5>
-                    <p>
-                      {{ upvc }} Products
+                       class="card-img-top col-6"
+                       alt="...">
+                  <div class="card-body col-6">
+                    <p class="card-text">
+                      <h5>
+                        UPVC PIPE & FITTINGS
+                      </h5>
+                      <p>
+                        {{ upvc }} Products
+                      </p>
                     </p>
-                  </p>
-                </div>
+                  </div>
                 </div>
               </div>
             </a>
@@ -411,18 +421,18 @@
               <div class="card">
                 <div class="row">
                   <img src="{% static 'images/images/cpvcbrasstee.jpg' %}"
-                     class="card-img-top col-6"
-                     alt="...">
-                <div class="card-body col-6">
-                  <p class="card-text">
-                    <h5>
-                      CPVC PIPE & FITTINGS
-                    </h5>
-                    <p>
-                      {{ cpvc }} Products
+                       class="card-img-top col-6"
+                       alt="...">
+                  <div class="card-body col-6">
+                    <p class="card-text">
+                      <h5>
+                        CPVC PIPE & FITTINGS
+                      </h5>
+                      <p>
+                        {{ cpvc }} Products
+                      </p>
                     </p>
-                  </p>
-                </div>
+                  </div>
                 </div>
               </div>
             </a>
@@ -432,18 +442,18 @@
               <div class="card">
                 <div class="row">
                   <img src="{% static 'images/images/tee.gif' %}"
-                     class="card-img-top col-6"
-                     alt="...">
-                <div class="card-body col-6">
-                  <p class="card-text">
-                    <h5>
-                      PVC PIPE & FITTINGS
-                    </h5>
-                    <p>
-                      {{ pvc }} Products
+                       class="card-img-top col-6"
+                       alt="...">
+                  <div class="card-body col-6">
+                    <p class="card-text">
+                      <h5>
+                        PVC PIPE & FITTINGS
+                      </h5>
+                      <p>
+                        {{ pvc }} Products
+                      </p>
                     </p>
-                  </p>
-                </div>
+                  </div>
                 </div>
               </div>
             </a>
@@ -453,42 +463,42 @@
               <div class="card">
                 <div class="row">
                   <img src="{% static 'images/images/sintexTank.jpg' %}"
-                     class="card-img-top col-6"
-                     alt="...">
-                <div class="card-body col-6">
-                  <p class="card-text">
-                    <h5>
-                      SINTEX TANKS
-                    </h5>
-                    <p>
-                      {{ tank }} Products
+                       class="card-img-top col-6"
+                       alt="...">
+                  <div class="card-body col-6">
+                    <p class="card-text">
+                      <h5>
+                        SINTEX TANKS
+                      </h5>
+                      <p>
+                        {{ tank }} Products
+                      </p>
                     </p>
-                  </p>
-                </div>
+                  </div>
                 </div>
               </div>
             </a>
           </div>
           <div class="col-4">
-<a href='{% url "category" categ="Rubber" %}'>
-  <div class="card">
-    <div class="row">
-      <img src="{% static 'images/images/rubbersheetNeoprene.jpg' %}"
-         class="card-img-top col-6"
-         alt="...">
-    <div class="card-body col-6">
-      <p class="card-text">
-        <h5>
-          RUBBER GASKET
-        </h5>
-        <p>
-          {{ rubber }} Products
-        </p>
-      </p>
-    </div>
-    </div>
-  </div>
-</a>
+            <a href='{% url "category" categ="Rubber" %}'>
+              <div class="card">
+                <div class="row">
+                  <img src="{% static 'images/images/rubbersheetNeoprene.jpg' %}"
+                       class="card-img-top col-6"
+                       alt="...">
+                  <div class="card-body col-6">
+                    <p class="card-text">
+                      <h5>
+                        RUBBER GASKET
+                      </h5>
+                      <p>
+                        {{ rubber }} Products
+                      </p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
           <div class="col-4 more">
             <a href="/product">Check Out more products
@@ -525,71 +535,83 @@
         </div>
       </div>
       <div class="adverts" id="aboutUs">
-
         <div class="container">
-    <div class="row ">
-   <div class="col-lg-12">
-                         
-                           
-                         </div>
-           </div>
-            
-           
-            <div class="row">
-
+            <div class="aboutslider m-3">
+              <div class="slide">
                 <div class="col-lg-4 advert_col">
-
-                    <!-- Advert Item -->
-
-                    <div class="advert d-flex flex-row align-items-center justify-content-start">
-                        <div class="advert_content">
-                            <div class="advert_title_2"><a href="#">Mission</a></div>
-                            <div class="advert_text">Our aim is provide Trading , fabricated , manufacturing, reliable product for trader and Industrial customer.</div>
-                        </div>
-                        <div class="ml-auto" style="margin-right:auto! important;">
-                            <div class="advert_image"><img src="{% static 'images/advert_mission.jpg' %}" alt=""></div>
-                        </div>
+                  <!-- Advert Item -->
+                  <div class="advert d-flex flex-row align-items-center justify-content-start">
+                    <div class="advert_content">
+                      <div class="advert_title_2">
+                        <a href="#">Mission</a>
+                      </div>
+                      <div class="advert_text">
+                        Our aim is provide Trading , fabricated , manufacturing, reliable product for trader and Industrial customer.
+                      </div>
                     </div>
+                    <div class="ml-auto" style="margin-right:auto! important;">
+                      <div class="advert_image">
+                        <img src="{% static 'images/advert_mission.jpg' %}" alt="">
+                      </div>
+                    </div>
+                  </div>
                 </div>
-
+              </div>
+              <div class="slide">
                 <div class="col-lg-4 advert_col">
-
-                    <!-- Advert Item -->
-
-                    <div class="advert d-flex flex-row align-items-center justify-content-start">
-                        <div class="advert_content">
-                            <!-- <div class="advert_subtitle">Vision</div>-->
-                            <div class="advert_title_2"><a href="#">Vision</a></div>
-                            <div class="advert_text">To offer quality product at competitive price to customer for improve their End product performance</div>
-                        </div>
-                        <div class="ml-auto" style="margin-right:auto! important;">
-                            <div class="advert_image"><img src="{% static 'images/advert_vision.png' %}" alt=""></div>
-                        </div>
+                  <!-- Advert Item -->
+                  <div class="advert d-flex flex-row align-items-center justify-content-start">
+                    <div class="advert_content">
+                      <!-- <div class="advert_subtitle">Vision</div>-->
+                      <div class="advert_title_2">
+                        <a href="#">Vision</a>
+                      </div>
+                      <div class="advert_text">
+                        To offer quality product at competitive price to customer for improve their End product performance
+                      </div>
                     </div>
+                    <div class="ml-auto" style="margin-right:auto! important;">
+                      <div class="advert_image">
+                        <img src="{% static 'images/advert_vision.png' %}" alt="">
+                      </div>
+                    </div>
+                  </div>
                 </div>
-
+              </div>
+              <div class="slide">
                 <div class="col-lg-4 advert_col">
-
-                    <!-- Advert Item -->
-
-                    <div class="advert d-flex flex-row align-items-center justify-content-start">
-                        <div class="advert_content">
-                            <div class="advert_title_2"><a href="#">Core Value</a></div>
-                            <div class="advert_text"><i  aria-hidden="true"></i>&nbsp;&nbsp;Deliver Quality Product</div>
-                            <div class="advert_text"><i  aria-hidden="true"></i>&nbsp;&nbsp;Affordable Price for Items</div>
-                            <div class="advert_text"><i  aria-hidden="true"></i>&nbsp;&nbsp;Ethical Business</div>
-                        </div>
-                        <div class="ml-auto" style="margin-right:auto! important;">
-                            <div class="advert_image"><img src="{% static 'images/advert_coreValues.png' %}" alt=""></div>
-                        </div>
+                  <!-- Advert Item -->
+                  <div class="advert d-flex flex-row align-items-center justify-content-start">
+                    <div class="advert_content">
+                      <div class="advert_title_2">
+                        <a href="#">Core Value</a>
+                      </div>
+                      <div class="advert_text">
+                        <i aria-hidden="true"></i>&nbsp;&nbsp;Deliver Quality Product
+                      </div>
+                      <div class="advert_text">
+                        <i aria-hidden="true"></i>&nbsp;&nbsp;Affordable Price for Items
+                      </div>
+                      <div class="advert_text">
+                        <i aria-hidden="true"></i>&nbsp;&nbsp;Ethical Business
+                      </div>
                     </div>
+                    <div class="ml-auto" style="margin-right:auto! important;">
+                      <div class="advert_image">
+                        <img src="{% static 'images/advert_coreValues.png' %}" alt="">
+                      </div>
+                    </div>
+                  </div>
                 </div>
-
             </div>
+
+           
+           
+          </div>
         </div>
-    </div>
-      <div class="container main-content my-5">
-        <h1 class="text-center my-4" id="contact">
+      </div>
+      <div class="container main-content my-2">
+        <h1 class="text-center" id="contact">
           Contact Us
         </h1>
       </div>
@@ -618,8 +640,8 @@
             </div>
             <div class="contact-child child2">
               <div class="inside-contact">
-                  <form action="" method="post">
-                    {% csrf_token %}
+                <form action="" method="post">
+                  {% csrf_token %}
                   <h3>
                     <span id="confirm">
                     </h3>
@@ -638,11 +660,15 @@
                     <p>
                       Message *
                     </p>
-                    <textarea id="txt_message" rows="4" cols="20" name="message" Required="required"></textarea>
+                    <textarea id="txt_message"
+                              rows="4"
+                              cols="20"
+                              name="message"
+                              Required="required"></textarea>
                     <input type="submit" id="btn_send" value="SEND">
                   </form>
-                  </div>
                 </div>
+              </div>
             </div>
           </div>
         </div>

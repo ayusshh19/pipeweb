@@ -339,6 +339,9 @@ height: 8rem;
   .speciality{
     height: 50rem;
   }
+  .aboutuspara{
+    font-size: 2rem;
+  }
   .inneritem2,
 .inneritem4,
 .inneritem6 {
@@ -419,6 +422,12 @@ height: 8rem;
   .whatsapp-float,.india-float{
     right: 1rem;
   }
+  .advert
+{
+	width: 35rem;
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+margin: auto;
+}
 }
 .product .card{
   margin: auto;

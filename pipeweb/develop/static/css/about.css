@@ -1,12 +1,11 @@
 .adverts
 {
 	width: 100%;
-	padding-top: 90px;
-	padding-bottom: 80px;
+	padding-top: 4rem;
 }
 .advert
 {
-	width: 100%;
+	width: 40rem;
 	height: 190px;
 	border: solid 1px #e8e8e8;
 	box-shadow: 0px 1px 15px rgba(0,0,0,0.1);
