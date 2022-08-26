@@ -7,8 +7,9 @@ html{
     margin: auto;
 }
 .accordion button{
-    font-size: 60%;
-    font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #013A6B;
 }
 /* accordion */
 /* product page  */
@@ -99,6 +100,8 @@ html{
 .accordion-body{
     display: flex;
     flex-direction: column;
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 .accordion-body a{
     text-decoration: none;
@@ -153,14 +156,85 @@ html{
   }
   @media (max-width:460px){
     html{
-      font-size: 3px;
+      font-size: 8px;
     }
-    
-    
+    .head .row{
+      display: flex;
+      flex-direction: column;
+          }
+          .head .row .col-5{
+            display: block;
+            width: 100%;
+          }
+          .head .row .col-4{
+            display: block;
+            width: 100%;
+          }
+    .left1{
+      width: 100%;
+      padding: 0%;
+      display: none;
+    }
+    .cen{
+      display: block;
+      width: 100%;
+      margin: 1rem;
+    }
+    .righthand{
+      display: block;
+      width: 100%;
+      padding: 0;
+    }
+
+    .righthand .col-4{
+      width: 100%;
+      display: block;
+    }
+    .search {
+      width: calc(100% - 40px);
+      height: 6rem;
+      background-color: white;
+      border-radius: 3rem;
+      border: 3px solid black;
+      margin: 2rem;
+    }
+    .categorypart .col-3{
+      display: block;
+      width: 100%;
+    }
+    .productitem .col-8{
+      display: block;
+    }
+    .productcart{
+      display: block;
+      width: 100%;
+    }
+    .productcart .col-3{
+width: 50%;
+margin: 0%;
+    }
+    .card{
+      width: 18rem;
+      position: relative;
+          height: 20rem;
+          margin-left: 2rem;
   }
-  @media (max-width:360px){
-    html{
-      font-size: 2px;
-    }
-    
+  .card-img-top{
+    width: 18rem;
+      height: 20rem;
+  }
+  .col-8 {
+    flex: 0 0 auto;
+    width: 100.666667% !important;
+}
+.accordion button{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #013A6B;
+}
+.accordion-body{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
   }

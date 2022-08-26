@@ -1,6 +1,13 @@
 jQuery(function() {
 
-  
+  jQuery('.mainslider').slick({
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+  autoplaySpeed: 2000,
+    fade: true,
+    cssEase: 'linear'
+  });
   jQuery('.homeslider').slick({
   slidesToShow: 8,
   autoplay: true,

@@ -162,3 +162,4 @@ def searchproduct(request):
       except:
           product = product_paginator.page(PRODUCTS_PER_PAGE)
       return render(request,'product.html',{"product":product, 'page_obj':product, 'is_paginated':True, 'paginator':product_paginator})
+  

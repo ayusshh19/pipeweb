@@ -27,7 +27,6 @@ ul.ui-autocomplete >li{
 }
 .cen {
   font-size: 4rem;
-  font-family: cursive;
   font-weight: bolder;
   display: flex;
   align-items: center;
@@ -155,12 +154,11 @@ hr.one {
 .mainslide{
     background-color: #013A6B;
     background-image: -webkit-linear-gradient(30deg, #013A6B 50%, #004E95 50%);
-    height: 45rem;
+    height: 40rem;
 }
 .main img{
   width: 30rem;
   height: 30rem;
-  margin: auto;
 }
 .main h2{
   color: white;
@@ -316,14 +314,17 @@ height: 8rem;
   }
 
   .left1{
-    display: block;
     width: 100%;
     padding: 0%;
+    display: none;
+  }
+  .cen .col-5{
+    width: 100%;
   }
   .cen{
     display: block;
     width: 100%;
-    margin: 1rem;
+    margin: 0.5rem;
   }
   .righthand .col-4{
     width: 100%;
