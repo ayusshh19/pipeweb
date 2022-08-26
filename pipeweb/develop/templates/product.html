@@ -312,11 +312,11 @@
                     <p>
                       <strong>Price:</strong> {{ item.price }}
                     </p>
-                    <div  class="row buttonboth  my-4" >
-                      <div class="col-6 main-link text-center ">
-                        <a href='{% url "pdf" id=item.id %}' class="qoutation p-3">Get Quotation</a>
+                    <div  class="row buttonboth  my-4 m-0" >
+                      <div class="col-5 main-link text-center ">
+                        <a href='{% url "pdf" id=item.id %}' class="qoutation p-3">Quotation</a>
                       </div>
-                      <div class="col-6 call-link text-center">
+                      <div class="col-7 call-link text-center">
                         <a href='tel:+919892250482' class="call p-3">
                           Call Now <img src="{% static 'images/phone-call.png' %}" alt="" srcset="">
                         </a>

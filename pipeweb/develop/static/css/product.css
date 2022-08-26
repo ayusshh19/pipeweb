@@ -214,19 +214,23 @@ width: 50%;
 margin: 0%;
     }
     .card{
-      width: 18rem;
+      width: 19rem;
       position: relative;
-          height: 20rem;
+          height: 24rem;
           margin-left: 2rem;
+          font-size: 2rem;
   }
   .card-img-top{
-    width: 18rem;
-      height: 20rem;
+    width: 19rem;
+      height: 24rem;
   }
   .col-8 {
     flex: 0 0 auto;
     width: 100.666667% !important;
-}
+  }
+  .card:hover .card-body{
+    height: 22rem;
+  }
 .accordion button{
   font-size: 1.5rem;
   font-weight: 700;
@@ -236,5 +240,22 @@ margin: 0%;
   font-size: 1.2rem;
   font-weight: 600;
 }
-
+.buttonboth{
+  width: 100%;
+  margin: 0%;
+}
+.main-link a{
+  font-size: 1rem;
+}
+.main-link a:hover{
+  color: #013A6B;
+  background-color: white;
+  border: 2px solid #013A6B ;
+}
+.call-link a{
+  font-size: 1rem;
+}
+.call-link a img{
+width: 1.7rem;
+}
   }
