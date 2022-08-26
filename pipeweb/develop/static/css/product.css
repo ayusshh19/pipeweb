@@ -39,12 +39,15 @@ html{
     position: fixed;
     bottom: 10rem;
     left: 1rem;
+    display: inline;
+    z-index: -1;
   }
   .india-float{
     position: fixed;
     bottom: 2rem;
     left: 1rem;
-    z-index: 1;
+    display: inline;
+    z-index: -1;
   }
 .card-body{
     color: #013A6B;
@@ -131,6 +134,8 @@ html{
   border-radius: 10rem;
   text-align: center;
   font-size: 2rem;
+  z-index: 10;
+ 
 }
 .pagination .main a{
   background-color: #fdcb6e;

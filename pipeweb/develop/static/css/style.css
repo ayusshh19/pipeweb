@@ -72,7 +72,7 @@ hr.one {
   display: flex;
   align-items: center;
   padding: 2rem;
-  border: 3px solid black;
+  border: 2px solid black;
 }
 .search > i {
   font-size: 2rem;
@@ -275,6 +275,7 @@ height: 10rem;
   bottom: 10rem;
   right: 5rem;
   z-index: 1;
+  display: inline;
 }
 .india-float img{
   width: 8rem;
@@ -285,6 +286,7 @@ height: 8rem;
   bottom: 1rem;
   right: 5rem;
   z-index: 1;
+  display: inline;
 }
 @media (min-width:780px) and (max-width:995px) {
   html{
