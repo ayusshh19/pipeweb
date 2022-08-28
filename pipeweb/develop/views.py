@@ -30,6 +30,7 @@ def render_to_pdf(template_src, context_dict={}):
 def generatepdf(request,id):
         try:
             order_db = products.objects.get(id = id)     #you can filter using order_id as well
+            product=products.objects.filter(Q(('{}__icontains'.format("desc"),order_db.desc))|Q(('{}__icontains'.format("type"), order_db.product))).order_by('price')
         except:
             return HttpResponse("505 Not Found")
 
@@ -40,7 +41,9 @@ def generatepdf(request,id):
             'size': order_db.size,
             'desc': order_db.desc,
             'price': order_db.price,
+            'productitem':product
         }
+        print(product)
         pdf = render_to_pdf('pdf.html', data)
         #return HttpResponse(pdf, content_type='application/pdf')
 
