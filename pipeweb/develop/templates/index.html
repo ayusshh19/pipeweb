@@ -577,66 +577,58 @@
           </div>
         </div>
       </div>
-      <div class="container main-content my-2">
+      <div class="container main-content my-4">
         <h1 class="text-center" id="contact">
           Contact Us
         </h1>
       </div>
+      
       <div>
-        <div class="container">
-          <div class="contact-parent">
-            <div class="contact-child child1">
-              <p>
-                <i class="fas fa-map-marker-alt"></i> Address
-                <br />
-                <span> Plot No.71/1/B/2&3,Unit No:5,
-                  <br>
-                  G Block,Khira Industraial Premises CO-OP Soc,MIDC, Bhosari,Pune - 411026
-                </span>
-              </p>
-              <p>
-                <i class="fas fa-phone-alt"></i>Phone
-                <br />
-                <span>+91 8308815048</span>
-              </p>
-              <p>
-                <i class=" far fa-envelope"></i>Email
-                <br />
-                <span>swapnilentps@gmail</span>
-              </p>
-            </div>
-            <div class="contact-child child2">
-              <div class="inside-contact">
-                <form action="" method="post">
-                  {% csrf_token %}
-                  <h3>
-                    <span id="confirm">
-                    </h3>
-                    <p>
-                      Name *
-                    </p>
-                    <input id="txt_name" type="text" name="name" Required="required">
-                    <p>
-                      Email *
-                    </p>
-                    <input id="txt_email" type="text" name="email" Required="required">
-                    <p>
-                      Phone *
-                    </p>
-                    <input id="txt_phone" type="text" name="phone" Required="required">
-                    <p>
-                      Message *
-                    </p>
-                    <textarea id="txt_message"
-                              rows="4"
-                              cols="20"
-                              name="message"
-                              Required="required"></textarea>
-                    <input type="submit" id="btn_send" value="SEND">
-                  </form>
-                </div>
+        <div class="container contactus">
+          <div class="row">
+            <div class="col-6">
+              <div class="map m-auto" style="display: table;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60490.33808230801!2d73.77717648807838!3d18.634979743283957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c780c24d3757%3A0xcf7459421a58fa5b!2sBhosari%2C%20Pimpri-Chinchwad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1661534614525!5m2!1sen!2sin" width="600" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="text-center"></iframe>
+              </div>
+              <div class="details m-2 p-4">
+                  <p><strong>Address : </strong>Plot No.71/1/B/2&3,Unit No:5, G Block,Khira Industraial Premises CO-OP Soc,MIDC, Bhosari,Pune - 411026</p>
+                  <p><strong>Email : </strong>swapnil-enterprises-pune@gmail.com</p>
+                  <p><strong>Phone No : </strong> 9892250482</p>
               </div>
             </div>
+            <div class="col-6">
+              <form action="{% url 'home' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Name:</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" name="name" placeholder="Enter your name">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Email:</label>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" name="email" placeholder="Enter your Email">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputPassword3" class="col-sm-2 col-form-label">Phone No:</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputPassword3" name="phone" placeholder="Enter your phone Number">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Message:</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3"></textarea>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-10 mx-auto">
+                    <button type="submit" class="btn subbutton">Contact us</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
           </div>
         </div>
       </div>

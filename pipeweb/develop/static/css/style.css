@@ -438,6 +438,16 @@ margin: auto;
   margin-left: -2rem;
   margin-right: 2rem;
 }
+.contactus form{
+  width: 100%;
+}
+iframe{
+  width: 100%;
+}
+.contactus .col-6{
+  display: block;
+  width: 100%;
+}
 }
 .product .card{
   margin: auto;
@@ -465,3 +475,30 @@ color: black;
   margin-left: -4rem;
 }
 
+.form-group{
+  margin: 2rem;
+  font-size: 1.5rem;
+}
+.form-group input{
+  padding: 1.3rem;
+  font-size: 1.2rem;
+}
+.subbutton{
+  width: 100%;
+  background-color: #004E95;
+  color: white;
+  margin: auto;
+  font-size: 1.4rem;
+}
+.contactus form{
+  border: 2px solid #004E95;
+}
+.subbutton:hover{
+  color: #004E95;
+  background-color: white;
+}
+.details p{
+  text-align: center;
+  font-size: 1.8rem;
+  color: #004E95;
+}
