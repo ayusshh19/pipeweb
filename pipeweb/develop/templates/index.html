@@ -207,7 +207,7 @@
           </a>
         </div>
         <div class="slide">
-          <a href='{% url "category" categ="SWR" %}'>
+          <a href='{% url "category" categ="pipe" %}'>
             <img src="{% static 'images/images/swr/sweptteewithdoor.png' %}"
                  alt=""
                  srcset="">
@@ -221,7 +221,7 @@
           </a>
         </div>
         <div class="slide">
-          <a href='{% url "category" categ="VALVES" %}'>
+          <a href='{% url "category" categ="VALVE" %}'>
             <img src="{% static 'images/images/brassHBallvalve.jpg' %}"
                  alt=""
                  srcset="">
@@ -229,13 +229,13 @@
           </a>
         </div>
         <div class="slide">
-          <a href='{% url "category" categ="SINTEX" %}'>
+          <a href='{% url "category" categ="tank" %}'>
             <img src="{% static 'images/images/sintexTank.jpg' %}" alt="" srcset="">
             <h5>SINTEX TANKS</h5>
           </a>
         </div>
         <div class="slide">
-          <a href='{% url "category" categ="Clamps" %}'>
+          <a href='{% url "category" categ="Clamp" %}'>
             <img src="{% static 'images/images/uclampss.jpg' %}" alt="" srcset="">
             <h5>CLAMPS</h5>
           </a>
@@ -277,7 +277,7 @@
                   <a href="/product">Shop Now</a>
                 </div>
                 <div class="get mx-2 p-4">
-                  <a href="http://">Quotation</a>
+                  <a href="{% url 'generateall' %}">Quotation</a>
                 </div>
               </div>
             </div>
@@ -290,13 +290,13 @@
                    srcset="">
                 </div>
                 <div class="slide">
-                    <img src="{% static 'images/images/cpvcbrasstee.jpg' %}"
+                    <img src="{% static 'images/images/mainslide.png' %}"
                    alt=""
                    class=" text-center"
                    srcset="">
                 </div>
                 <div class="slide">
-                    <img src="{% static 'images/images/tee.gif' %}"
+                    <img src="{% static 'images/images/mainslide2.png' %}"
                    alt=""
                    class=" text-center"
                    srcset="">
@@ -308,6 +308,32 @@
         
       </div>
       <!-- image corousal  -->
+      <div class="modal fade fs-1" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Swapnil Login</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+           <form action="{% url 'adminlogin' %}" method="post">
+            {% csrf_token %}
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Username</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="username" placeholder="Enter your Username">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Password</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="pass" placeholder="Enter your password">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-outline-success">Login</button>
+            </div>
+           </form>
+          </div>
+        </div>
+      </div>
       <!-- our speciality -->
       <div class="container main-content my-5">
         <h1 class="text-center my-4">

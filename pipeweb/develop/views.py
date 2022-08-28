@@ -1,7 +1,7 @@
 import email
 from unicodedata import name
 from django.shortcuts import render
-from develop.models import products
+from develop.models import products,image
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.db.models import Q
 # for generating pdf invoice
@@ -59,9 +59,50 @@ def generatepdf(request,id):
             return response
         return HttpResponse("Not found")
 
+def generateallpdf(request,id=None):
+        try:
+            order_db = products.objects.all()
+        except:
+            return HttpResponse("505 Not Found")
+
+        data = {
+            'productitem':order_db
+        }
+        print(product)
+        pdf = render_to_pdf('pdfall.html', data)
+        #return HttpResponse(pdf, content_type='application/pdf')
+
+        # force download
+        if pdf:
+            response = HttpResponse(pdf, content_type='application/pdf')
+            filename = "Qoutation.pdf"
+            content = "inline; filename='%s'" %(filename)
+            #download = request.GET.get("download")
+            #if download:
+            content = "attachment; filename=%s" %(filename)
+            response['Content-Disposition'] = content
+            return response
+        return HttpResponse("Not found")
 
 def test(request):
     return render(request,'pdf.html')
+
+def loginadmin(request):
+    if request.method=='POST':
+        username=request.POST['username']
+        password=request.POST['pass']
+        if username=='swapnil' and password=='swapnil2022':
+            product=products.objects.all()
+            return render(request,'admin.html',{'product':product,'edit':False})
+    new_mail=False
+    UPVC=products.objects.filter(('{}__icontains'.format("desc"), 'UPVC')).count()
+    CPVC=products.objects.filter(('{}__icontains'.format("desc"), 'CPVC')).count()
+    PVC=products.objects.filter(('{}__icontains'.format("desc"), 'PVC')).count()
+    TANK=products.objects.filter(('{}__icontains'.format("desc"), 'TANK')).count()
+    RUBBER=products.objects.filter(('{}__icontains'.format("desc"), 'RUBBER')).count()
+    print({'upvc':UPVC,'cpvc':CPVC,'pvc':PVC,'tank':TANK,'rubber':RUBBER})
+    return render(request,'index.html',{'upvc':UPVC,'cpvc':CPVC,'pvc':PVC,'tank':TANK,'rubber':RUBBER,'new_mail':new_mail})
+
 # Create your views here.
 def home(request):
     new_mail=False
@@ -166,3 +207,53 @@ def searchproduct(request):
           product = product_paginator.page(PRODUCTS_PER_PAGE)
       return render(request,'product.html',{"product":product, 'page_obj':product, 'is_paginated':True, 'paginator':product_paginator})
   
+def addproduct(request):
+    if request.method=='POST':
+        print(request.POST['product'])
+        print(request.FILES['image'])
+        # image=os.path.basename(request.FILES['image'])
+        prod=products(product=request.POST['product'],size=request.POST['size'],type=request.POST['type'],price=request.POST['price'],desc=request.POST['desc'],image=request.FILES['image'])
+        img=image(imagepath=request.FILES['image'])
+        img.save()
+        prod.save()
+        product=products.objects.all()
+        return render(request,'admin.html',{'product':product,'edit':False})
+    product=products.objects.all()
+    return render(request,'admin.html',{'product':product,'edit':False})
+
+def deleteprod(request,id=None):
+    if id is not None:
+        try:
+            prod=products.objects.get(id=id)
+            prod.delete()
+            product=products.objects.all()
+            return render(request,'admin.html',{'product':product,'edit':False})
+        except:
+            product=products.objects.all()
+            return render(request,'admin.html',{'product':product,'edit':False})
+    product=products.objects.all()
+    return render(request,'admin.html',{'product':product})
+    
+def updateprod(request,id=None):
+    if id is not None:
+        print(id)
+        try:
+            prod=products.objects.get(id=id)
+            product=products.objects.all()
+            print('shukla')
+            return render(request,'admin.html',{'product':product,'prod':prod,'edit':True})
+        except:
+            print('ayuhs')
+            product=products.objects.all()
+            return render(request,'admin.html',{'product':product,'edit':False})
+    product=products.objects.all()
+    return render(request,'admin.html',{'product':product})
+    
+def updateitem(request):
+    if request.method=='POST':
+        prod=products.objects.filter(id=request.POST['id']).update(product=request.POST['product'],size=request.POST['size'],type=request.POST['type'],price=request.POST['price'],desc=request.POST['desc'],image=request.FILES['image'])
+        print(prod)
+        product=products.objects.all()
+        return render(request,'admin.html',{'product':product,'edit':False})
+    product=products.objects.all()
+    return render(request,'admin.html',{'product':product,'edit':False})

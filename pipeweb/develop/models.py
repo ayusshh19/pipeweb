@@ -10,3 +10,6 @@ class products(models.Model):
     desc=models.CharField(max_length=255)
     price=models.CharField(max_length=100)
     image=models.CharField(max_length=100)
+    
+class image(models.Model):
+    imagepath=models.FileField(upload_to='develop/static/images/images',default='')

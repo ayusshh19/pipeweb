@@ -33,7 +33,7 @@
             border: 0.2rem solid black;
         }
         th,td{
-            padding: 1rem;
+            padding: 8px;
         }
     </style>
     <title>Html to pdf</title>
@@ -51,7 +51,8 @@
             <p><strong>Date: </strong>{{date}}</p>
         </div>
         <div class="qoutation m-5">
-            <table class="table">
+              <h1>All products</h1>
+              <table class="table">
                 <thead>
                   <tr>
                     <th scope="col">Product Id</th>
@@ -62,29 +63,10 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">{{order_id}}</th>
-                    <td>{{product}}</td>
-                    <td>{{size}}</td>
-                    <td>{{desc}}</td>
-                    <td>{{price}}</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h1>Other Releted products</h1>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Product Name</th>
-                    <th scope="col">Type</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Total</th>
-                  </tr>
-                </thead>
-                <tbody>
                   {% for item in productitem %}
                   <tr>
-                    <td scope="row">{{item.product}}</td>
+                    <th scope="row">{{item.id}}</th>
+                    <td>{{item.product}}</td>
                     <td>{{item.size}}</td>
                     <td>{{item.desc}}</td>
                     <td>{{item.price}}</td>

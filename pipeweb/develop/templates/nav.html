@@ -65,15 +65,20 @@
               <li><a class="dropdown-item" href='{% url "category" categ="UPVC" %}'>UPVC PIPE & FITTINGS</a></li>
               <li><a class="dropdown-item" href='{% url "category" categ="CPVC" %}'>CPVC PIPE & FITTINGS</a></li>
               <li><a class="dropdown-item" href='{% url "category" categ="PVC" %}'>PVC PIPE & FITTINGS</a></li>
-              <li><a class="dropdown-item" href='{% url "category" categ="SWR" %}'>SWR PIPE & FITTINGS</a></li>
+              <li><a class="dropdown-item" href='{% url "category" categ="pipe" %}'>SWR PIPE & FITTINGS</a></li>
               <li><a class="dropdown-item" href='{% url "category" categ="PP" %}'>PP, HDPE PIPE & FITTINGS</a></li>
-              <li><a class="dropdown-item" href='{% url "category" categ="VALVES" %}'>BRASS,CI,MS BALL VALVES</a></li>
-              <li><a class="dropdown-item" href='{% url "category" categ="SINTEX" %}'>SINTEX TANKS</a></li>
-              <li><a class="dropdown-item" href='{% url "category" categ="Clamps" %}'>CLAMPS</a></li>
+              <li><a class="dropdown-item" href='{% url "category" categ="VALVE" %}'>BRASS,CI,MS BALL VALVES</a></li>
+              <li><a class="dropdown-item" href='{% url "category" categ="tank" %}'>SINTEX TANKS</a></li>
+              <li><a class="dropdown-item" href='{% url "category" categ="Clamp" %}'>CLAMPS</a></li>
               <li><a class="dropdown-item" href='{% url "category" categ="Rubber" %}'>RUBBER GASKET</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="/product">ALL</a></li>
             </ul>
+          </li>
+          <li class="nav-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <a class="nav-link" >
+              <img src="{% static 'images/contacts.png' %}"  alt="" srcset="">
+            Admin Panel</a>
           </li>
 
       </div>
