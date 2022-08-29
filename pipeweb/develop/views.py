@@ -15,7 +15,7 @@ from django.db.models import Count
 from django.core.mail import send_mail
 from django.http import JsonResponse
 from develop.serializers import prodt
-
+from django.contrib import messages
 PRODUCTS_PER_PAGE = 32
 
 def render_to_pdf(template_src, context_dict={}):
@@ -217,7 +217,9 @@ def addproduct(request):
         img.save()
         prod.save()
         product=products.objects.all()
+        messages.success(request,'product added!!!!')
         return render(request,'admin.html',{'product':product,'edit':False})
+    messages.error(request,'Something went wrong!!!!')
     product=products.objects.all()
     return render(request,'admin.html',{'product':product,'edit':False})
 
@@ -227,9 +229,11 @@ def deleteprod(request,id=None):
             prod=products.objects.get(id=id)
             prod.delete()
             product=products.objects.all()
+            messages.success(request,'product deleted!!!!')
             return render(request,'admin.html',{'product':product,'edit':False})
         except:
             product=products.objects.all()
+            messages.error(request,'Something went wrong!!!!')
             return render(request,'admin.html',{'product':product,'edit':False})
     product=products.objects.all()
     return render(request,'admin.html',{'product':product})
@@ -254,6 +258,8 @@ def updateitem(request):
         prod=products.objects.filter(id=request.POST['id']).update(product=request.POST['product'],size=request.POST['size'],type=request.POST['type'],price=request.POST['price'],desc=request.POST['desc'],image=request.FILES['image'])
         print(prod)
         product=products.objects.all()
+        messages.success(request,'product Updated successfully!!!!')
         return render(request,'admin.html',{'product':product,'edit':False})
+    messages.error(request,'Something went wrong!!!!')
     product=products.objects.all()
     return render(request,'admin.html',{'product':product,'edit':False})
