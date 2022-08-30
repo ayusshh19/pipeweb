@@ -277,6 +277,9 @@ height: 10rem;
   z-index: 1;
   display: inline;
 }
+.call-float{
+  display: none;
+}
 .india-float img{
   width: 8rem;
 height: 8rem;
@@ -447,6 +450,17 @@ iframe{
 .contactus .col-6{
   display: block;
   width: 100%;
+}
+.call-float img{
+  width: 6rem;
+height: 6rem;
+}
+.call-float{
+  position: fixed;
+  bottom: 1rem;
+  left: 2rem;
+  z-index: 1;
+  display: inline;
 }
 }
 .product .card{
