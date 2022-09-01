@@ -10,6 +10,53 @@
             body{
                 font-size: 2rem;
             }
+            @media (max-width:480px){
+              .tableclass{
+                width: 100% !important;
+                font-size: 1rem;
+                overflow-x: auto;
+              }
+              table{
+                width: 100vw;
+              }
+              tbody th,td {
+                width: 10%;
+                margin: -1rem;
+              }
+              tbody td{
+                margin: 0.5rem !important;
+              }
+              .righthand{
+                display: block;
+                width: 100%;
+                padding: 0;
+              }
+            
+              .left1{
+                width: 100%;
+                padding: 0%;
+                display: none;
+              }
+              .cen .col-5{
+                width: 100%;
+              }
+              .cen{
+                display: block;
+                width: 100%;
+                margin: 0.5rem;
+              }
+              .righthand .col-4{
+                width: 100%;
+              }
+              .search {
+                width: calc(100% - 40px);
+                height: 6rem;
+                background-color: white;
+                border-radius: 3rem;
+                border: 3px solid black;
+                margin: 2rem;
+              }
+            }
         </style>
 {% endblock staticin %}
 {% block body %}
@@ -20,7 +67,7 @@
     </div>
 {% endfor %}    
 <h1 class="text-center m-5">Admin panel</h1>
-<div class="container">
+<div class="container ">
     <form class="was-validated" action="{% url 'add' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <h1>Add Product</h1>
@@ -87,8 +134,8 @@
       </form>
 </div>
 {% endif %}
-<div class="container">
-    <h1>All Product</h1>
+<div class="container tableclass">
+    <h1 class="text-center">All Product</h1>
     <table class="table">
         <thead>
           <tr>
